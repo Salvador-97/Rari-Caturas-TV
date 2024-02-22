@@ -1,0 +1,43 @@
+.cabecera{
+    
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+h1{
+    padding: 23px;
+    /*border: 2px solid black;*/
+    width: 50%;
+    text-align: center;
+    display: inline-block;
+}
+
+.logo{
+    /*border: 2px solid black;*/
+    width: 40%;
+    margin-top: 20px;
+}
+
+.lista-inicio{
+    border: 2px solid black;
+    padding: 10px;
+}
+.lista-inicio li{
+    display: inline;
+    margin-right: 20px;
+    font-size: 25px;
+    /*border: 2px solid black;*/
+}
+
+.contenido{
+    border: 2px solid black;
+    width: 940px;
+    margin: 10px auto;
+    padding: 20px
+}
+
+.pie-pagina{
+    border: 2px solid black;
+    background: darkorchid;
+}
