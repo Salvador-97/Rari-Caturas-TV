@@ -5,92 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
     <title>Rari-Caturas TV</title>
     </head>
     <body>
         <header>
-            <div class="cabecera">
-                <nav">
-                    <img src="images/Logo_Pagina_Color_2.png" alt="Logo_Pagina" class="logo">
-                    <h1>
-                        Esta página es creada para quitar la necesidad de descargar las series que se encuentran 
-                        en mi canal de YouTube y así poder verlas de forma online. 
-                    </h1>
-                    <ul class="lista-inicio">
-                        <li>Inicio</li>
-                        <li>Series Animadas</li>
-                        <li>Series Live Action</li>
-                        <li>Adult Swim</li>
-                        <li>Buscar</li>
-                    </ul>
+            <div class="contenedor">
+                <img src="images/Logo_Pagina_Color_2.png" alt="" class="logotipo">
+                <nav>
+                    <a href="#" class="activo">Inicio</a>
+                    <a href="#">Series Animadas</a>
+                    <a href="#">Series Live Action</a>
+                    <a href="#">Adult Swim</a>
                 </nav>
             </div>
         </header>
         <main>
-            <h2>Series</h2>
-            <ul class="lista-series">
-                <li>
-                    <img src="images/Posters/The-Venture-Bros-Poster.jpg" alt="VentureBros" class="portadas">
-                    <p>Titulo</p>
-                </li>
-                <li>
-                    <img src="images/Posters/Aqua-Teen-Poster.jpg" alt="Aqua-Teen" class="portadas">
-                    <p>Titulo</p>
-                </li>
-                <li>
-                    <img src="images/Posters/Sealab-2021-Poster.png" alt="Sealab-2021" class="portadas">
-                    <p>Titulo</p>
-                </li>
-                <li>
-                    <img src="images/Posters/Axe-Cop-Poster.jpg" alt="Axe-Cop" class="portadas">
-                    <p>Titulo</p>
-                </li>
-                <li>
-                    <img src="images/Posters/Black-Dynamite-Poster.jpg" alt="Black-Dynamite" class="portadas">
-                    <p>Titulo</p>
-                </li>
-                <li>
-                    <img src="images/Posters/Dream-Corp-Poster.jpg" alt="Dream-Corp" class="portadas">
-                    <p>Titulo</p>
-                </li>
-                <li>
-                    <img src="images/Posters/Drawn-Together-Poster.jpg" alt="Drawn-Together" class="portadas">
-                    <p>Titulo</p>
-                </li>
-                <li>
-                    <img src="images/Posters/Mr-Pickles-Poster.jpg" alt="Mr-Pickles" class="portadas">
-                    <p>Titulo</p>
-                </li>
-                <li>
-                    <img src="images/Posters/Mythic-Quest-Poster-2.jpg" alt="Mythic-Quest" class="portadas">
-                    <p>Titulo</p>
-                </li>
-                <li>
-                    <img src="images/Posters/Robot-Chicken-Poster-2.jpg" alt="Robot-Chicken" class="portadas">
-                    <p>Titulo</p>
-                </li>
-                <li>
-                    <img src="images/Posters/SuperJail-Poster.jpg" alt="SuperJail" class="portadas">
-                    <p>Titulo</p>
-                </li>
-                <li>
-                    <img src="images/Posters/Eric-Andre-Show-Poster.png" alt="Eric-Andre-Show" class="portadas">
-                    <p>Titulo</p>
-                </li>
-                <li>
-                    <img src="images/Posters/Habin-Hotel-Poster.png" alt="Habin-Hotel" class="portadas">
-                    <p>Titulo</p>
-                </li>
-            </ul>
-
+            <div class="serie-principal">
+                <div class="contenedor">
+                    <h3 class="titulo"><img src="images/Logos/The_Venture_Bros_logo.svg" alt=""></h3>
+                    <p class="sinopsis">
+                        Los hermanos Venture es una serie animada que cuenta las aventuras, desventuras y Venturas de dos adolescentes, Hank Venture y Dean Venture: su "súper científico" padre, Thaddeus "Rusty" Venture; y el guardaespaldas de la familia, el agente del gobierno Brock Samson. Es notable destacar su fuerte continuidad, personajes complejos e inesperados cambios de trama. 
+                    </p>
+                    <button role="button" class="boton"><i class="fa-solid fa-play"></i>Reproducir</button>
+                    <button role="button" class="boton"><i class="fa-solid fa-circle-info"></i>Información</button>
+                </div>
+            </div>
         </main>
         <footer class="pie-pagina">
-            <ul>
-                <li><a href="https://www.facebook.com/profile.php?id=100064650643710">Facebook</a></li>
-                <li>Instagram</li>
-                <li>Tik Tok</li>
-                <li>YouTube</li>
-            </ul>
         </footer>
+        <script src="https://kit.fontawesome.com/dc6efa34d2.js" crossorigin="anonymous"></script>
     </body>
 </html>
