@@ -15,6 +15,7 @@ body{
 
 header{
     padding: 30px 0;
+    background: linear-gradient(rgba(39, 39, 58, 0.5) 60%, #000 100%)
 }
 
 header .contenedor{
@@ -90,8 +91,22 @@ header nav a.activo{
     margin-right: 1.25em;
 }
 
+.contenedor-titulo-controles{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.contenedor-titulo-controles h3{
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+}
+
 /*Contenedor principal y flechas*/
 .peliculas-recomendadas{
+    margin-left: 5%;
+    margin-right: 5%;
     margin-bottom: 70px;
 }
 
@@ -130,6 +145,32 @@ header nav a.activo{
     right: 0;
 }
 
+.peliculas-recomendadas .contenedor-carrusel{
+    width: 100%;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.peliculas-recomendadas .contenedor-carrusel .carrusel{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-carrusel .pelicula{
+    min-width: 20%;
+    transition: 0.3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.peliculas-recomendadas .contenedor-carrusel .pelicula.hover{
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-carrusel .pelicula img{
+    width: 100%;
+    vertical-align: top;
+}
 /*Media Queries*/
 
 @media screen and (max-width: 900px){
@@ -146,4 +187,11 @@ header nav a.activo{
         max-width: 100%;
         text-align: center;
     }
+    .peliculas-recomendadas .contenedor-carrusel{
+        overflow: visible;
+    }
+    .peliculas-recomendadas .contenedor-carrusel .carrusel{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
 }
