@@ -1,6 +1,6 @@
 :root {
     --rojo: #E50914;
-    --fondo: #000;
+    --fondo: #181818;
 }
 
 body {
@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background: #000;
+    background: #242423;
     padding: 0.9em;
     /* border: 4px solid #FFF; */
 }
@@ -33,7 +33,7 @@ header {
     font-weight: 400;
     font-style: normal;
     font-size: 40px;
-    text-shadow: -1.5px 0 #fff, 0 1.5px #fff, 1.5px 0 #fff, 0 -1.5px #fff;
+    /* text-shadow: -1.5px 0 #fff, 0 1.5px #fff, 1.5px 0 #fff, 0 -1.5px #fff; */
 }
 
 .imagen-titulo {
@@ -63,9 +63,12 @@ main {
 }
 
 .contenedor-mensaje {
+    background: #242423;
     width: 50%;
     margin: 1.5em auto;
+    border-radius: 0.8em;
     border: 5px dotted #ac46a1;
+    box-shadow: 0px 0px 30px #ac46a1;
     padding: 1.2em;
 }
 
@@ -90,10 +93,65 @@ main {
 .contenedor-posters {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     margin: 1em 6em;
 }
 
 .contenedor-posters img {
     width: 15em;
     margin: 0 auto;
+    transition: all 1s;
+}
+
+.contenedor-posters img:hover {
+    width: 15.5em;
+}
+
+/* Pie de página */
+footer {
+    background: #242423;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0.6em 0;
+}
+
+.contenedor-redes-sociales {
+    display: flex;
+    margin: 0 6em;
+}
+
+.titulo-sociales {
+    color: #fff;
+    font-size: 1.6em;
+    margin: 0.6em 4em;
+}
+
+.contenedor-redes-sociales a {
+    font-size: 1.3em;
+    color: #FFF;
+    text-decoration: none;
+    transition: all 2s;
+}
+
+.contenedor-redes-sociales div {
+    margin: 0.6em;
+}
+
+.fa-brands, .fa-solid {
+    padding: 0.3em;
+}
+
+.fa-paypal {
+    margin-right: 0.3em;
+}
+
+/* .contenedor-redes-sociales a fa-brands:hover {
+    font-size: 1.5em;
+} */
+
+.copyright {
+    padding: 0.6em;
+    color: #fff;
+    text-align: center;
 }
