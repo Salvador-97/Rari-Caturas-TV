@@ -136,9 +136,9 @@ footer {
 
 .contenedor-redes-sociales a {
     font-size: 1.3em;
-    color: #FFF;
+    color: #ced4da;
     text-decoration: none;
-    transition: all 2s;
+    transition: all 0.5s;
 }
 
 .contenedor-redes-sociales div {
@@ -155,7 +155,8 @@ footer {
     margin: auto;
 } */
 
-.fa-brands, .fa-solid {
+.fa-brands,
+.fa-solid {
     padding: 0.3em;
 }
 
@@ -163,18 +164,80 @@ footer {
     margin-right: 0.3em;
 }
 
+.flex-redes a:hover {
+    color: #fff;
+}
+
 /* .contenedor-redes-sociales a fa-brands:hover {
     font-size: 1.5em;
 } */
 
 .copyright {
+    display: block;
     padding: 0.6em;
     color: #fff;
     text-align: center;
 }
 
-.contenedor-informacion {
+/* .contenedor-informacion {
     display: flex;
     width: 100px;
     height: 100px;
+} */
+
+/* Pagina de la serie */
+.contenedor-serie {
+    /* width: 100%; */
+    /* height: 500px; */
+    border: 4px solid #fff;
+    /* margin: 0 auto; */
+    /* display: flex; */
+}
+
+.contenedor-banner {
+    background: linear-gradient(rgba(0, 0, 0, .05) 0%, #000 100%), url(../images/Banners/The-Venture-Bros-Banner.png);
+    background-size: cover;
+    height: 40em;
+    width: 100%;
+    display: flex;
+    align-items: end;
+}
+
+/* .contenedor-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+/* .contenedor-logo-sinopsis {
+    position: absolute;
+} */
+
+.descripcion-serie {
+    margin: 0 6em 3em;
+}
+
+.contenedor-banner .logo-serie {
+    /* width: 18em; */
+    margin: 0 100%;
+    object-fit: scale-down;
+    /* margin: 1em; */
+    text-align: left;
+    margin: 0.5em 0;
+}
+
+.contenedor-banner .contenedor-sinopsis {
+    width: 50%;
+    text-align: justify;
+    color: #FFF;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4em;
+    /* margin: 6em 4em; */
+}
+
+.contenedor-banner button {
+    margin: 2em 0;
+    padding: 1em 4em;
 }

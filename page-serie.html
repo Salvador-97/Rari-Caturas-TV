@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/reset.css">
-    <!-- <link rel="stylesheet" href="styles/style-page.css"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mochiy+Pop+P+One&family=Permanent+Marker&family=Rampart+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Madimi+One&display=swap" rel="stylesheet">
-    <title>Rari-Caturas TV</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/style-page.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Doodle+Shadow&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mochiy+Pop+P+One&family=Permanent+Marker&family=Rampart+One&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Concert+One&family=Madimi+One&display=swap"
+            rel="stylesheet">
+        <title>The Venture Bros</title>
     </head>
     <body>
         <header>
-            <div class="contenedor">
-                <h1 class="nombre-pagina">RARI-CATURAS TV</h1>
-                <!--<img src="images/Logo_Pagina_Color_2.png" alt="" class="logotipo"> --> 
-                <nav>
+            <div class="contenedor-header">
+                <div class="titulo-logo-main">
+                    <img
+                        src="images/television-vieja.png" class="imagen-titulo"
+                        alt>
+                    <h1 class="nombre-pagina">RARI-CATURAS TV</h1>
+                </div>
+
+                <nav class="nav-principal">
                     <a href="index.html" class="activo">Inicio</a>
                     <a href="#">Series Animadas</a>
                     <a href="#">Series Live Action</a>
@@ -25,21 +36,62 @@
                 </nav>
             </div>
         </header>
-        <main>
-            <div class="serie-principal">
-                <div class="contenedor">
-                    <h3 class="titulo"><img src="images/Logos/The_Venture_Bros_logo.svg" alt=""></h3>
-                    <p class="sinopsis">
-                        Los hermanos Venture es una serie animada que cuenta las aventuras, desventuras y Venturas de dos adolescentes, Hank Venture y Dean Venture: su "súper científico" padre, Thaddeus "Rusty" Venture; y el guardaespaldas de la familia, el agente del gobierno Brock Samson. Es notable destacar su fuerte continuidad, personajes complejos e inesperados cambios de trama. 
+        <main class="contenedor-serie">
+            <div class="contenedor-banner">
+                <div class="descripcion-serie">
+                    <img src="images/Logos/The_Venture_Bros_logo.png" alt="" class="logo-serie">
+
+                    <p class="contenedor-sinopsis">
+                        Cuenta las aventuras, desventuras y Venturas de dos adolescentes, Hank Venture y 
+                        Dean Venture: su "súper científico" padre, Thaddeus "Rusty" Venture; y el 
+                        guardaespaldas de la familia, el agente del gobierno Brock Samson. Es notable 
+                        destacar su fuerte continuidad, personajes complejos e inesperados cambios de trama.
+                        La mayoría de los personajes de "Los hermanos Venture" son reminiscentes de los de 
+                        Jonny Quest, héroes y villanos de cómics e incluso personas reales.
                     </p>
-                    <button role="button" class="boton"><i class="fa-solid fa-play"></i>Reproducir</button>
-                    <button role="button" class="boton"><i class="fa-solid fa-circle-info"></i>Información</button>
+                    <button><i class="fa-solid fa-clapperboard"></i>Temporadas</button>
+                    <button><i class="fa-solid fa-circle-info"></i>Información</button>
                 </div>
-            </div>
+                
             </div>
         </main>
         <footer class="pie-pagina">
+            <div class="contenedor-redes-sociales">
+                <h3 class="titulo-sociales">Redes Sociales</h3>
+                <div class="flex-redes">
+                    <div>
+                        <ul>
+                            <li><a
+                                    href="https://www.facebook.com/people/Rari-Caturas/100064650643710/"><i
+                                        class="fa-brands fa-facebook"
+                                        style="color: #00a8e8;"></i>Facebook</a></li>
+                            <li><a href="https://www.instagram.com/rari_caturas/"><i class="fa-brands fa-instagram"
+                                        style="color: #ff70a6;"></i>Instagram</a></li>
+                            <li><a
+                                    href="https://www.tiktok.com/@rari_caturas"><i
+                                        class="fa-brands fa-tiktok"
+                                        style="color: #8093f1;"></i>TikTok</a></li>
+                        </ul>    
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a href="https://www.youtube.com/@Rari-Caturas-Series"><i class="fa-brands fa-youtube"
+                                        style="color: #ef233c;""></i>YouTube</a>
+                            </li>
+                            <!-- <li><a href="#"><i class="fa-solid fa-envelope"
+                                        style="color: #72ddf7;"></i>Correo</a></li> -->
+                            <li><a href="https://paypal.me/RariCaturas?country.x=MX&locale.x=es_XC"><i class="fa-brands fa-paypal" style="color: #FFD43B;"></i></i>PayPal</a></li>
+                        </ul>
+                    </div>
+                </div>
+           
+                </div>
+                     <div class="contenedor-informacion">
+                <!-- <h3>Faq</h3> -->
+            </div>
+            <!-- <h3 class="copyright">&copy Rari-Caturas - 2024</h3> -->
         </footer>
-        <script src="https://kit.fontawesome.com/dc6efa34d2.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/dc6efa34d2.js"
+            crossorigin="anonymous"></script>
     </body>
 </html>
