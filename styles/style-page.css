@@ -186,13 +186,9 @@ footer {
 } */
 
 /* Pagina de la serie */
-.contenedor-serie {
-    /* width: 100%; */
-    /* height: 500px; */
+/* .contenedor-serie {
     border: 4px solid #fff;
-    /* margin: 0 auto; */
-    /* display: flex; */
-}
+} */
 
 .contenedor-banner {
     background: linear-gradient(rgba(0, 0, 0, .05) 0%, #000 100%), url(../images/Banners/The-Venture-Bros-Banner.png);
@@ -203,25 +199,14 @@ footer {
     align-items: end;
 }
 
-/* .contenedor-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
-/* .contenedor-logo-sinopsis {
-    position: absolute;
-} */
 
 .descripcion-serie {
     margin: 0 6em 3em;
 }
 
 .contenedor-banner .logo-serie {
-    /* width: 18em; */
     margin: 0 100%;
     object-fit: scale-down;
-    /* margin: 1em; */
     text-align: left;
     margin: 0.5em 0;
 }
@@ -230,14 +215,57 @@ footer {
     width: 50%;
     text-align: justify;
     color: #FFF;
-    font-family: "Concert One", sans-serif;
+    font-family: "Lilita One", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 1.4em;
-    /* margin: 6em 4em; */
 }
 
+/* Botones */
+
 .contenedor-banner button {
-    margin: 2em 0;
-    padding: 1em 4em;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #000;
+    margin: 1em 0;
+    padding: 0.4em 2em;
+    border-radius: 0.4em;
+    background: #fff;
+    box-shadow: none;
+    transition: 0.5s ease all;
+    border: none;
 }
+
+.contenedor-banner select {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #000;
+    border-radius: 0.4em;
+    margin-right: 1.5em;
+    background: #fff; 
+    padding: 0.6em 2em;
+    transition: 0.5s ease all;
+    border: #fff;
+    outline: none;
+    appearance: none;
+}
+
+.contenedor-banner button i {
+    padding-right: 1em;
+}
+
+.contenedor-banner button:hover {
+    color: #fff;
+    background: #242423;
+}
+
+.contenedor-banner select:hover {
+    color: #fff;
+    background: #242423;
+    border: #000;
+}
+
