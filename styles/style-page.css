@@ -115,6 +115,7 @@ footer {
     font-style: normal;
     padding: 0.6em 0;
     display: flex;
+    justify-content: space-between;
 }
 
 .contenedor-redes-sociales {
@@ -171,6 +172,41 @@ footer {
 /* .contenedor-redes-sociales a fa-brands:hover {
     font-size: 1.5em;
 } */
+
+/* Preguntas */
+.contenedor-preguntas {
+    display: flex;
+    flex-direction: column;
+    margin: 0 6em;
+}
+
+
+.contenedor-preguntas h3{
+    color: #fff;
+    font-size: 1.6em;
+    margin: 0.6em 0;
+    padding-right: 8em;
+}
+
+.contenedor-preguntas a {
+    color: #ced4da;
+    font-size: 1.3em;
+    text-decoration: none;
+    display: block;
+    margin: 0.4em 0;
+    transition: all 0.5s;
+}
+
+.contenedor-preguntas a:hover {
+    color: #fff;
+    
+}
+
+.contenedor-preguntas div {
+    display: flex;
+    flex-direction: column;
+    margin: 0.6em 0;
+}
 
 .copyright {
     display: block;
@@ -294,11 +330,11 @@ footer {
 
 }
 
-.grid-episodios div {
-    /* background: url(../images/Caratulas/1.png); */
-    /* background-size: cover; */
-    /* border: 2px solid #000; */
-}
+/* .grid-episodios div {
+    background: url(../images/Caratulas/1.png);
+    background-size: cover;
+    border: 2px solid #000;
+} */
 
 .grid-episodios img {
     width: 100%;
@@ -319,3 +355,4 @@ footer {
     text-align: center;
     padding: 0.5em;
 }
+
