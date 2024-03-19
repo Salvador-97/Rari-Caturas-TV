@@ -322,12 +322,17 @@ footer {
 }
 
 .grid-episodios {
-    display: grid;
+    display: flex;
     /* grid-template-rows: repeat(4, 200px); */
     grid-template-columns: repeat(4, 300px);
     /* background: #ac46a1; */
     gap: 1em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
+.grid-episodios div {
+    width: 23%;
 }
 
 /* .grid-episodios div {
