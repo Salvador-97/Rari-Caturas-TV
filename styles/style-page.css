@@ -227,7 +227,7 @@ footer {
 } */
 
 .contenedor-banner {
-    background: linear-gradient(rgba(0, 0, 0, .05) 0%, #000 100%), url(../images/Banners/Sealab-Banner.jpg);
+    background: linear-gradient(rgba(0, 0, 0, .05) 0%, #000 100%), url(../images/Banners/Aqua-Teen-Banner.jpg);
     background-size: cover;
     height: 40em;
     width: 100%;
@@ -274,7 +274,7 @@ footer {
     border: none;
 }
 
-.contenedor-banner select {
+.contenedor-banner .selectorTemporadas {
     font-family: "Lilita One", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -299,7 +299,7 @@ footer {
     background: #242423;
 }
 
-.contenedor-banner select:hover {
+.contenedor-banner .selectorTemporadas:hover {
     color: #fff;
     background: #242423;
     border: #000;
@@ -321,17 +321,14 @@ footer {
     margin-bottom: 4em;
 }
 
-.grid-episodios {
+.flex-episodios {
     display: flex;
-    /* grid-template-rows: repeat(4, 200px); */
-    grid-template-columns: repeat(4, 300px);
-    /* background: #ac46a1; */
     gap: 1em;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.grid-episodios div {
+.flex-episodios div {
     width: 23%;
 }
 
@@ -341,17 +338,17 @@ footer {
     border: 2px solid #000;
 } */
 
-.grid-episodios img {
+.flex-episodios img {
     width: 100%;
     /* object-fit: cover; */
 }
 
-.grid-episodios img:hover {
+.flex-episodios img:hover {
     width: 100%;
     /* object-fit: cover; */
 }
 
-.grid-episodios h4 {
+.flex-episodios h4 {
     font-family: "Concert One", sans-serif;
     font-weight: 400;
     font-style: normal;
