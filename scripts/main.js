@@ -10,7 +10,7 @@ class serie {
     listaEpisodios = [];
 
     getLogo() {
-        let rutaLogo = `<img src="../images/Logos/${this.logo}" alt="" class="logo-serie">`;
+        let rutaLogo = `<img src="images/Logos/${this.logo}" alt="" class="logo-serie">`;
         return rutaLogo;
     }
 
@@ -28,6 +28,17 @@ class serie {
 
     addEpisodios(nombreEpisodio) {
         this.listaEpisodios.push(nombreEpisodio);
+    }
+}
+
+class episodio {
+    constructor(nombre, link){
+        this.nombre = nombre;
+        this.link = link;
+    }
+
+    getLink() {
+        return this.link;
     }
 }
 
@@ -84,15 +95,9 @@ temporadasSerie.appendChild(fragmentoTemporadas);
 
 for (i = 0; i < listaEP.length; i++){
     let contenedorEpisodio = document.createElement("DIV");
-    contenedorEpisodio.innerHTML = `<a href="#"><img src="../images/Caratulas/Aqua-Teen/${i + 1}.png" alt=""></a>
+    contenedorEpisodio.innerHTML = `<a href="episodio-page.html"><img src="images/Caratulas/Aqua-Teen/${i + 1}.png" alt=""></a>
     <h4>Ep.${i + 1}. ${listaEP[i]}</h4>`;
     fragmentoEpisodios.appendChild(contenedorEpisodio);
 }
 
 contenedorEpisodios.appendChild(fragmentoEpisodios);
-
-
-// contenedorEP.appendChild(logoSerie);
-// contenedorEP.appendChild(descripcionSerie);
-// temporadasSerie.appendChild(fragmentoTemporadas);
-

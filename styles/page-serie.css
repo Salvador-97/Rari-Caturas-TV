@@ -1,0 +1,132 @@
+.contenedor-banner {
+    background: linear-gradient(rgba(0, 0, 0, .05) 0%, #000 100%), url(../images/Banners/Aqua-Teen.jpg);
+    background-size: cover;
+    background-position: bottom;
+    height: 40em;
+    width: 100%;
+    display: flex;
+    align-items: end;
+}
+
+
+.descripcion-serie {
+    margin: 0 6em 3em;
+}
+
+.contenedor-banner .logo-serie {
+    margin: 0 100%;
+    object-fit: scale-down;
+    text-align: left;
+    margin: 0.5em 0;
+}
+
+.contenedor-banner .contenedor-sinopsis {
+    width: 50%;
+    text-align: justify;
+    color: #FFF;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4em;
+}
+
+/* Botones */
+
+.contenedor-banner button {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #000;
+    margin: 1em 0;
+    padding: 0.4em 2em;
+    border-radius: 0.4em;
+    background: #fff;
+    box-shadow: none;
+    transition: 0.5s ease all;
+    border: none;
+}
+
+.contenedor-banner .selectorTemporadas {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #000;
+    border-radius: 0.4em;
+    margin-right: 1.5em;
+    background: #fff;
+    padding: 0.6em 2em;
+    transition: 0.5s ease all;
+    border: #fff;
+    outline: none;
+    /* appearance: none; */
+}
+
+.contenedor-banner button i {
+    padding-right: 1em;
+}
+
+.contenedor-banner button:hover {
+    color: #fff;
+    background: #242423;
+}
+
+.contenedor-banner .selectorTemporadas:hover {
+    color: #fff;
+    background: #242423;
+    border: #000;
+}
+
+.contenedor-episodios h3 {
+    color: #fff;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+    margin: 1em 0;
+}
+
+/* GRID-EPISODIOS */
+
+.contenedor-episodios {
+    margin: 0 6em;
+    margin-bottom: 4em;
+}
+
+.flex-episodios {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-episodios div {
+    width: 23%;
+}
+
+/* .grid-episodios div {
+    background: url(../images/Caratulas/1.png);
+    background-size: cover;
+    border: 2px solid #000;
+} */
+
+.flex-episodios img {
+    width: 100%;
+    /* object-fit: cover; */
+}
+
+.flex-episodios img:hover {
+    width: 100%;
+    /* object-fit: cover; */
+}
+
+.flex-episodios h4 {
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1em;
+    color: #FFF;
+    text-align: center;
+    padding: 0.5em;
+}

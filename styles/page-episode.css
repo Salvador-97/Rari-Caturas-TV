@@ -1,0 +1,64 @@
+.contenedor-episodio {
+    width: 100%;
+    background: #000;
+    margin: 0 auto;
+    display: flex;
+}
+
+.contenedor-episodio iframe {
+    margin: 0 auto;
+    width: 90%;
+    height: 600px;
+    /* border: 2px solid #fff; */
+}
+
+.seccion-episodio {
+    width: 70%;
+    /* border: 2px solid #fff; */
+    margin: 1em auto;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.seccion-episodio h4 {
+    color: #fff;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+    font-style: normal;
+    text-align: center;
+    padding: 0.5em 0;
+}
+
+.seccion-episodio button {
+    background: transparent;
+    padding: 1em;
+    border: none;
+}
+
+.seccion-episodio button:hover {
+    color: #fff;
+}
+
+.seccion-episodio i {
+    color: #ced4da;
+    font-size: 2em;
+    transition: all 0.8s;
+}
+
+.seccion-episodio i:hover {
+    color: #fff;
+}
+
+.seccion-episodio .fa-poo:hover {
+    color: #a98467;
+}
+
+.seccion-episodio .fa-heart:hover {
+    color: #ef233c;
+}
+
+.seccion-episodio .fa-circle-down:hover {
+    color: #55a630;
+}

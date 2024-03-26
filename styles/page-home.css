@@ -1,0 +1,44 @@
+.contenedor-mensaje {
+    background: #242423;
+    width: 50%;
+    margin: 1.5em auto;
+    border-radius: 0.8em;
+    border: 5px dotted #ac46a1;
+    box-shadow: 0px 0px 30px #ac46a1;
+    padding: 1.2em;
+}
+
+.contenedor-mensaje p {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+    color: #FFF;
+}
+
+/* Series recomendadas */
+.contenedor-series-recomendadas h2 {
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFF;
+    font-size: 2em;
+    margin: 0 3em;
+}
+
+.contenedor-posters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 1em 6em;
+}
+
+.contenedor-posters img {
+    width: 15em;
+    margin: 0 auto;
+    transition: all 1s;
+}
+
+/* .contenedor-posters img:hover {
+    width: 15.5em;
+} */
