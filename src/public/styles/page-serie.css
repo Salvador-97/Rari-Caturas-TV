@@ -30,22 +30,7 @@
 
 /* Botones */
 
-.contenedor-banner button {
-    font-family: "Lilita One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-    color: #000;
-    margin: 1em 0;
-    padding: 0.4em 2em;
-    border-radius: 0.4em;
-    background: #fff;
-    box-shadow: none;
-    transition: 0.5s ease all;
-    border: none;
-}
-
-.contenedor-banner form {
+/* .contenedor-banner form {
     display: inline-block;
 }
 
@@ -61,11 +46,11 @@
     padding: 0.6em 2em;
     transition: 0.5s ease all;
     border: #fff;
-    outline: none;
-    /* appearance: none; */
-}
+    outline: none; */
+/* appearance: none; */
+/* } */
 
-.contenedor-banner button i {
+/* .contenedor-banner button i {
     padding-right: 1em;
 }
 
@@ -78,7 +63,82 @@
     color: #fff;
     background: #242423;
     border: #000;
+} */
+
+.contenedor-banner button {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #fff;
+    margin: 1em 0;
+    /* padding: 0.4em 2em; */
+    border-radius: 0.4em;
+    background-color: #495057;
+    box-shadow: none;
+    transition: 0.5s ease all;
+    border: none;
 }
+
+/*MENU DESPLEGABLE*/
+
+.contenedor-botones button{
+    padding: 0.4em 1.5em;
+}
+
+.nav-desplegable {
+    display: inline-block;
+    position: relative;
+    /* padding-right: 0.8em; */
+}
+
+.nav-contenedor {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #000;
+    border-radius: 0.4em;
+    margin-right: 1.5em;
+    background-color: #fff;
+    /* padding: 0.6em 2em; */
+    transition: 0.5s ease all;
+    border: #fff;
+    outline: none;
+    /* box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4); */
+}
+
+.nav-desplegable:hover .nav-contenedor {
+    display: block;
+}
+
+.nav-contenedor a {
+    display: block;
+    text-align: center;
+    color: #000;
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+.contenedor-botones .boton-info {
+    margin-left: 1em;
+}
+
+.contenedor-botones .boton-temporadas:hover, .boton-info:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.nav-contenedor a:hover {
+    color: #fff;
+    background: #495057;
+}
+
+/*Contenedor Episodios*/
 
 .contenedor-episodios h3 {
     color: #fff;

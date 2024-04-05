@@ -2,8 +2,7 @@
 
 <main class="contenedor-serie">
     <div class="contenedor-banner"
-        style="background: linear-gradient(rgba(0, 0, 0, .05) 0%, #000 100%), url('<%= serie.banner %>'); 
-           background-size: cover; background-position: top; height: 40em; width: 100%; display: flex; align-items: end;">
+        style="background: linear-gradient(rgba(0, 0, 0, .05) 0%, #000 100%), url('<%= serie.banner %>'); background-size: cover; background-position: top; height: 40em; width: 100%; display: flex; align-items: end;">
         <div class="descripcion-serie">
             <div>
                 <img src="<%= serie.logo %>" alt class="logo-serie">
@@ -14,17 +13,21 @@
                     <%= serie.descripcion %>
                 </p>
             </div>
-            <!-- <form action="/404" method="get"> -->
-                <select class="selectorTemporadas" name="temporada">
-                    <!-- Selector de temporadas -->
-                    <% for( let i = 0; i < serie.noTemporadas; i++ ) { %>
-                    <option class="selectorTemporadas"
-                        value="ATHF-<%= (i + 1) %>">Temporada <%= (i + 1)%></option>
-                    <% } %>
-                </select>
-            <!-- </form> -->
-            <button><i class="fa-solid fa-circle-info"
+            <!-- MENU DESPLEGAGLE -->
+            <div class="contenedor-botones">
+                <div class="nav-desplegable">
+                    <button class="boton-temporadas">Temporada <i class="fa-solid fa-angle-down"></i></button>
+                    <div class="nav-contenedor">
+                        <% for( let i = 0; i < serie.noTemporadas; i++ ) { %>
+                        <a
+                            href="/watch/<%= serie.idSerie %>/<%= serie.season %><%= (i + 1) %>">Temporada
+                            <%= (i + 1)%></a>
+                        <% } %>
+                    </div>
+                </div>
+                <button class="boton-info"><i class="fa-solid fa-circle-info"
                     aria-hidden="true"></i>Información</button>
+            </div>
         </div>
     </div>
     <div class="contenedor-episodios">
@@ -34,7 +37,9 @@
             <% if (capitulos) { %>
             <% for( let i = 0; i < capitulos.length; i++ ) { %>
             <div>
-                <a href="/watch/<%= serie.idSerie %>/<%= capitulos[i].idTemporada %>/<%= capitulos[i].nombre %>"><img src="<%= capitulos[i].caratula %>" alt></a>
+                <a
+                    href="/watch/<%= serie.idSerie %>/<%= capitulos[i].idTemporada %>/<%= capitulos[i].nombre %>"><img
+                        src="<%= capitulos[i].caratula %>" alt></a>
                 <h4>Ep.<%= (i + 1) %>. <%= capitulos[i].nombre %></h4>
             </div>
             <% } %>
