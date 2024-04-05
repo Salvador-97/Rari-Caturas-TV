@@ -14,13 +14,15 @@
                     <%= serie.descripcion %>
                 </p>
             </div>
-            <select class="selectorTemporadas">
-                <!-- Selector de temporadas -->
-                <% for( let i = 0; i < serie.noTemporadas; i++ ) { %>
-                <option class="selectorTemporadas"
-                    value="ATHF-<%= (i + 1) %>">Temporada <%= (i + 1)%></option>
-                <% } %>
-            </select>
+            <!-- <form action="/404" method="get"> -->
+                <select class="selectorTemporadas" name="temporada">
+                    <!-- Selector de temporadas -->
+                    <% for( let i = 0; i < serie.noTemporadas; i++ ) { %>
+                    <option class="selectorTemporadas"
+                        value="ATHF-<%= (i + 1) %>">Temporada <%= (i + 1)%></option>
+                    <% } %>
+                </select>
+            <!-- </form> -->
             <button><i class="fa-solid fa-circle-info"
                     aria-hidden="true"></i>Información</button>
         </div>
@@ -32,7 +34,7 @@
             <% if (capitulos) { %>
             <% for( let i = 0; i < capitulos.length; i++ ) { %>
             <div>
-                <a href="/watch/<%= serie.idSerie %>/ATHF-<%= (i + 1) %>/<%= capitulos[i].nombre %>"><img src="<%= capitulos[i].caratula %>" alt></a>
+                <a href="/watch/<%= serie.idSerie %>/<%= capitulos[i].idTemporada %>/<%= capitulos[i].nombre %>"><img src="<%= capitulos[i].caratula %>" alt></a>
                 <h4>Ep.<%= (i + 1) %>. <%= capitulos[i].nombre %></h4>
             </div>
             <% } %>
