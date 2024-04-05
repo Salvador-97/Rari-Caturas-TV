@@ -1,13 +1,11 @@
-.contenedor-banner {
-    background: linear-gradient(rgba(0, 0, 0, .05) 0%, #000 100%), url(../images/Banners/Aqua-Teen.jpg);
+/* .contenedor-banner {
     background-size: cover;
     background-position: bottom;
     height: 40em;
     width: 100%;
     display: flex;
     align-items: end;
-}
-
+} */
 
 .descripcion-serie {
     margin: 0 6em 3em;
@@ -45,6 +43,10 @@
     box-shadow: none;
     transition: 0.5s ease all;
     border: none;
+}
+
+.contenedor-banner form {
+    display: inline-block;
 }
 
 .contenedor-banner .selectorTemporadas {

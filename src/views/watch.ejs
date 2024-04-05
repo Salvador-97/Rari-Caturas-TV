@@ -1,0 +1,44 @@
+<%- include('templates/_header') %>
+
+<main class="contenedor-serie">
+    <div class="contenedor-banner"
+        style="background: linear-gradient(rgba(0, 0, 0, .05) 0%, #000 100%), url('<%= serie.banner %>'); 
+           background-size: cover; background-position: top; height: 40em; width: 100%; display: flex; align-items: end;">
+        <div class="descripcion-serie">
+            <div>
+                <img src="<%= serie.logo %>" alt class="logo-serie">
+                <!-- <img src="images/Logos/Aqua-Teen-Logo.png" alt class="logo-serie"> -->
+            </div>
+            <!-- Descripcion de la serie -->
+            <div><p class="contenedor-sinopsis">
+                    <%= serie.descripcion %>
+                </p>
+            </div>
+            <select class="selectorTemporadas">
+                <!-- Selector de temporadas -->
+                <% for( let i = 0; i < serie.noTemporadas; i++ ) { %>
+                <option class="selectorTemporadas"
+                    value="ATHF-<%= (i + 1) %>">Temporada <%= (i + 1)%></option>
+                <% } %>
+            </select>
+            <button><i class="fa-solid fa-circle-info"
+                    aria-hidden="true"></i>Información</button>
+        </div>
+    </div>
+    <div class="contenedor-episodios">
+        <h3>Episodios</h3>
+        <div class="flex-episodios">
+            <!-- Listado de episodios -->
+            <% if (capitulos) { %>
+            <% for( let i = 0; i < capitulos.length; i++ ) { %>
+            <div>
+                <a href="/watch/<%= serie.idSerie %>/ATHF-<%= (i + 1) %>/<%= capitulos[i].nombre %>"><img src="<%= capitulos[i].caratula %>" alt></a>
+                <h4>Ep.<%= (i + 1) %>. <%= capitulos[i].nombre %></h4>
+            </div>
+            <% } %>
+            <% } %>
+        </div>
+    </div>
+</main>
+
+<%- include('templates/_footer') %>
