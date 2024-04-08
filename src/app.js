@@ -33,5 +33,10 @@ app.listen(app.set('port'), () => {
     console.log(`Escuchando en el puerto 3000`);
 });
 
+app.use((req, res) => {
+    res.status(404).sendFile(path.join(__dirname, '/public/pages/404.html'));
+});
+
+
 //Recibir y decodificar datos que vengan del formulario
 app.use(express.urlencoded({extended: false}));

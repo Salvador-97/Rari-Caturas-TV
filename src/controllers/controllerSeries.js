@@ -18,16 +18,22 @@ controller.start = (req, res) => {
 
 
 controller.watch = (req, res) => {
+    if (req.params) {
+        console.log('Se encontraron parametros');
+        if (req.params.temporada) {
+            console.log('Parametro de temporada encontrado')
+        }
+    }
     const { id } = req.params;
     const { temporada } = req.params;
     let newTemporada;
-    console.log(req.body);
-    if (req.body) {
-        console.log('Parametro body encontrado...');
-    } else {
-        console.log('Parametro no encontrado...');
+    // console.log(req.body);
+    // if (req.body) {
+    //     console.log('Parametro body encontrado...');
+    // } else {
+    //     console.log('Parametro no encontrado...');
 
-    }
+    // }
     // console.log(`ID: ${id}`);
     // console.log(`Parametros: ${req.body.temporada}`);
     // console.log(temporada);
@@ -35,6 +41,10 @@ controller.watch = (req, res) => {
     //Conexion a la base de datos
     req.getConnection((error, conexion) => {
         conexion.query('SELECT * FROM seriesPrincipales WHERE idSerie = ?', [id], (error, serie) => {
+            // if (serie[0].idSerie) {
+            //     console.log('404 NOT FOUND');
+            //     // res.status(404);
+            // }
             if (error) {
                 res.json(error);
             }else {
@@ -64,19 +74,34 @@ controller.watch = (req, res) => {
     });
 };
 
-function consultaTemporada(Temporada) {
-    
-}
 
 controller.episodes = (req, res) => {
     // console.log(`BODY: ${req.body}`);
     // const { nombre } = req.params;
-    // const { id } = req.params;
-    // console.log(nombre);
-    // console.log(id);
+    const { temporada } = req.params;
+    const { nombre } = req.params;
+    console.log(temporada);
+    console.log(nombre);
+    req.getConnection((error, conexion) => {
+        if (error) {
+            res.json(error);
+        } else {
+            
+            conexion.query('SELECT nombre, link FROM capitulos WHERE idTemporada = ? AND nombre = ?', [temporada, nombre], (error, capitulo) => {
+                if (error) {
+                    res.json(error);
+                } else {
+                    // console.log(capitulo);
+                    console.log(capitulo[0].link);
+                    res.render('episode-page', {
+                        capitulo: capitulo[0]
+                    })
+                }
+            });
+        }
+    });
     // res.render('episode-page');    
 }
-
 
 
 module.exports = controller;

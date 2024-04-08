@@ -2,12 +2,12 @@
 
 <main class="contenedor-serie">
     <div class="contenedor-episodio">
-        <iframe src="https://wolfstream.tv/embed-4wcxwzfzdoz0.html" 
-        allowfullscreen ></IFRAME>
+        <iframe src="<%= capitulo.link %>" allowfullscreen="true"></iframe>
+        
     </div>
     <div class="seccion-episodio">
         <div>
-            <h4>3x09 - Dieta</h4>
+            <h4><%= capitulo.nombre %></h4>
         </div>
         <div>
             <button><i class="fa-solid fa-comment"></i></button>
@@ -16,6 +16,5 @@
             <button><i class="fa-solid fa-circle-down"></i></button>
         </div>
     </div>
-</main>
 
 <%- include('templates/_footer') %>

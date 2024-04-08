@@ -1,5 +1,6 @@
 <%- include('templates/_header') %>
 
+<title><%= serie.nombre %></title>
 <main class="contenedor-serie">
     <div class="contenedor-banner"
         style="background: linear-gradient(rgba(0, 0, 0, .05) 0%, #000 100%), url('<%= serie.banner %>'); background-size: cover; background-position: top; height: 40em; width: 100%; display: flex; align-items: end;">
@@ -16,7 +17,7 @@
             <!-- MENU DESPLEGAGLE -->
             <div class="contenedor-botones">
                 <div class="nav-desplegable">
-                    <button class="boton-temporadas">Temporada <i class="fa-solid fa-angle-down"></i></button>
+                    <button class="boton-temporadas">Temporadas <i class="fa-solid fa-angle-down"></i></button>
                     <div class="nav-contenedor">
                         <% for( let i = 0; i < serie.noTemporadas; i++ ) { %>
                         <a
@@ -40,7 +41,7 @@
                 <a
                     href="/watch/<%= serie.idSerie %>/<%= capitulos[i].idTemporada %>/<%= capitulos[i].nombre %>"><img
                         src="<%= capitulos[i].caratula %>" alt></a>
-                <h4>Ep.<%= (i + 1) %>. <%= capitulos[i].nombre %></h4>
+                <h4>Ep.<%= (i + 1) %> - <%= capitulos[i].nombre %></h4>
             </div>
             <% } %>
             <% } %>
