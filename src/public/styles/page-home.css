@@ -17,7 +17,7 @@
 }
 
 /* Series recomendadas */
-.contenedor-series-recomendadas h2 {
+.titulo-series {
     font-family: "Concert One", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -35,6 +35,21 @@
 
 .contenedor-posters img {
     width: 15em;
+    margin: 0 auto;
+    transition: all 1s;
+}
+
+.contenedor-series {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1em 6em;
+    margin-bottom: 4em;
+    gap: 2em;
+}
+
+.contenedor-series img {
+    width: 18em;
     margin: 0 auto;
     transition: all 1s;
 }

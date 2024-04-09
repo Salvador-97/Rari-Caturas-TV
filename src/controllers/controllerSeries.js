@@ -1,5 +1,7 @@
 //Se usa un objeto para mejor manejo y uso de metodos
 const controller = {};
+const path = require('path');
+const path404 = path.parse(__dirname);
 
 controller.start = (req, res) => {
     //Conexion a la base de datos
@@ -8,7 +10,6 @@ controller.start = (req, res) => {
             if (error) {
                 res.JSON(error);
             }
-            // console.log(typeof filas[0].poster);
             res.render('index', {
                 informacion: filas
             });
@@ -16,38 +17,15 @@ controller.start = (req, res) => {
     });
 };
 
-
 controller.watch = (req, res) => {
-    if (req.params) {
-        console.log('Se encontraron parametros');
-        if (req.params.temporada) {
-            console.log('Parametro de temporada encontrado')
-        }
-    }
     const { id } = req.params;
     const { temporada } = req.params;
     let newTemporada;
-    // console.log(req.body);
-    // if (req.body) {
-    //     console.log('Parametro body encontrado...');
-    // } else {
-    //     console.log('Parametro no encontrado...');
-
-    // }
-    // console.log(`ID: ${id}`);
-    // console.log(`Parametros: ${req.body.temporada}`);
-    // console.log(temporada);
-    // let idTemporada;
-    //Conexion a la base de datos
     req.getConnection((error, conexion) => {
         conexion.query('SELECT * FROM seriesPrincipales WHERE idSerie = ?', [id], (error, serie) => {
-            // if (serie[0].idSerie) {
-            //     console.log('404 NOT FOUND');
-            //     // res.status(404);
-            // }
             if (error) {
                 res.json(error);
-            }else {
+            } else if (serie[0] != null) {
                 if (temporada != undefined) {
                     // console.log('Parametro encontrado');
                     newTemporada = temporada;
@@ -56,9 +34,7 @@ controller.watch = (req, res) => {
                     newTemporada = serie[0].temporada;
                     // console.log(`Nuevo valor = ${newTemporada}`);
                 }
-                // temporada = newTemporada;
-                // console.log(`Temporada = ${newTemporada}`);
-                conexion.query('SELECT * FROM capitulos WHERE idTemporada = ?', [newTemporada] , (error, capitulos) => {
+                conexion.query('SELECT * FROM capitulos WHERE idTemporada = ?', [newTemporada], (error, capitulos) => {
                     if (error) {
                         res.json(error);
                     } else {
@@ -68,16 +44,16 @@ controller.watch = (req, res) => {
                             capitulos: capitulos
                         });
                     };
-                }
-            )} 
+                })
+            } else {
+                res.status(404).sendFile(path.join(path404.dir , '/public/pages/404.html'));
+            }
         });
     });
 };
 
 
 controller.episodes = (req, res) => {
-    // console.log(`BODY: ${req.body}`);
-    // const { nombre } = req.params;
     const { temporada } = req.params;
     const { nombre } = req.params;
     console.log(temporada);
@@ -86,7 +62,6 @@ controller.episodes = (req, res) => {
         if (error) {
             res.json(error);
         } else {
-            
             conexion.query('SELECT nombre, link FROM capitulos WHERE idTemporada = ? AND nombre = ?', [temporada, nombre], (error, capitulo) => {
                 if (error) {
                     res.json(error);
