@@ -192,3 +192,45 @@
     text-align: center;
     padding: 0.5em;
 }
+
+/*Modal*/
+.modal {
+    width: 25%;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4em;
+    text-align: center;
+    border: none;
+    border-radius: 0.4em;
+    background: #e9ecef;
+}
+
+.modal h3 {
+    font-weight: normal;
+
+}
+
+.modal .btn-cerrar {
+    color: #fff;
+    background-color: #d5535e;
+    padding: 0.8em 1.2em;
+    border: none;
+    border-radius: 0.4em;
+    transition: all 0.3s;
+    margin: 0;
+}
+
+.modal .btn-cerrar:hover {
+    background-color: #e02534;
+}
+
+.modal .titulo-info {
+    font-weight: bold;
+    margin: 0.5em;
+}
+
+.modal .info {
+    font-weight: normal;
+    margin: 0.8em;
+}

@@ -9,10 +9,18 @@ controller.start = (req, res) => {
         conexion.query('SELECT * FROM seriesRecomendadas', (error, filas) => {
             if (error) {
                 res.JSON(error);
+            } else{
+                conexion.query('SELECT * FROM seriesPrincipales', (error, series) => {
+                    if (error) {
+                        res.JSON(error);
+                    } else {
+                        res.render('index', {
+                            informacion : filas,
+                            serie : series
+                        });
+                    }
+                });
             }
-            res.render('index', {
-                informacion: filas
-            });
         });
     });
 };
@@ -75,8 +83,6 @@ controller.episodes = (req, res) => {
             });
         }
     });
-    // res.render('episode-page');    
 }
-
 
 module.exports = controller;

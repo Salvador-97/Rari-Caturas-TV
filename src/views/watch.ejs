@@ -17,7 +17,8 @@
             <!-- MENU DESPLEGAGLE -->
             <div class="contenedor-botones">
                 <div class="nav-desplegable">
-                    <button class="boton-temporadas">Temporadas <i class="fa-solid fa-angle-down"></i></button>
+                    <button class="boton-temporadas">Temporadas <i
+                            class="fa-solid fa-angle-down"></i></button>
                     <div class="nav-contenedor">
                         <% for( let i = 0; i < serie.noTemporadas; i++ ) { %>
                         <a
@@ -26,8 +27,23 @@
                         <% } %>
                     </div>
                 </div>
-                <button class="boton-info"><i class="fa-solid fa-circle-info"
-                    aria-hidden="true"></i>Información</button>
+
+                <button class="boton-info" id="openModal"><i
+                        class="fa-solid fa-circle-info"
+                        aria-hidden="true"></i>Información</button>
+                <dialog class="modal" id="mainModal">
+                    <div class="titulo-info">
+                        <h2>Información</h2>
+                    </div>
+                    <div class="info">
+                        <h3><b>Resolución:</b> 1920x1080</h3>
+                        <h3><b>Idioma:</b> Latino/Inglés</h3>
+                        <h3><b>Subtitulos:</b> Español</h3>
+                        <h3><b>Peso:</b> 1.5 GB x Episodio</h3>
+                    </div>
+                    <!-- <button onclick="closeModal()">Cerrar</button> -->
+                    <button class="btn-cerrar" id="closeModal">Cerrar</button>
+                </dialog>
             </div>
         </div>
     </div>
