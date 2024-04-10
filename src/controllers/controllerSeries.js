@@ -46,11 +46,18 @@ controller.watch = (req, res) => {
                     if (error) {
                         res.json(error);
                     } else {
-                        // console.log(serie);
-                        res.render('watch', {
-                            serie: serie[0],
-                            capitulos: capitulos
+                        conexion.query('SELECT * FROM informacionSeries WHERE id = ?', [newTemporada], (error, info) => {
+                            if (error) {
+                                res.json(error);
+                            } else {
+                                res.render('watch', {
+                                    serie: serie[0],
+                                    capitulos: capitulos,
+                                    info : info[0]
+                                });
+                            }
                         });
+                        // console.log(serie);
                     };
                 })
             } else {

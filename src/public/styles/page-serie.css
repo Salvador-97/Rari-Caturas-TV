@@ -65,26 +65,31 @@
     border: #000;
 } */
 
-.contenedor-banner button {
+.contenedor-botones{
+    display: flex;
+}
+
+.contenedor-botones .boton-temporadas, .boton-info {
     font-family: "Lilita One", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
-    color: #fff;
+    color: #ced4da;
     margin: 1em 0;
-    /* padding: 0.4em 2em; */
+    padding: 0.4em 2em;
     border-radius: 0.4em;
     background-color: #495057;
     box-shadow: none;
     transition: 0.5s ease all;
     border: none;
+    cursor: pointer;
 }
 
 /*MENU DESPLEGABLE*/
 
-.contenedor-botones button{
+/* .contenedor-botones .boton-temporadas .boton-info{
     padding: 0.4em 1.5em;
-}
+} */
 
 .nav-desplegable {
     display: inline-block;
@@ -107,7 +112,7 @@
     background-color: #fff;
     /* padding: 0.6em 2em; */
     transition: 0.5s ease all;
-    border: #fff;
+    /* border: #fff; */
     outline: none;
     /* box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4); */
 }
@@ -195,7 +200,7 @@
 
 /*Modal*/
 .modal {
-    width: 25%;
+    width: 30%;
     font-family: "Madimi One", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -211,18 +216,50 @@
 
 }
 
+/* .modal .contenedor-descarga {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+} */
+
 .modal .btn-cerrar {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
     color: #fff;
     background-color: #d5535e;
-    padding: 0.8em 1.2em;
+    padding: 0.5em 1.5em;
     border: none;
     border-radius: 0.4em;
-    transition: all 0.3s;
+    transition: all 0.5s;
     margin: 0;
 }
 
+.modal .btn-cerrar {
+    background-color: #d5535e;
+}
+
 .modal .btn-cerrar:hover {
-    background-color: #e02534;
+    background-color: #c61726;
+}
+
+.btn-descargar {
+    font-size: 2em;
+    background-color: transparent;
+    border: none;
+}
+
+.btn-descargar .fa-circle-down:hover {
+    color: #6ab448;
+    cursor: pointer;
+}
+
+.btn-descargar .fa-circle-down {
+    color: #ced4da;
+    font-size: 1em;
+    transition: all 0.8s;
 }
 
 .modal .titulo-info {
@@ -233,4 +270,29 @@
 .modal .info {
     font-weight: normal;
     margin: 0.8em;
+    display: flex;
+    justify-content: space-around;
 }
+
+.modal .info .dato {
+    text-align: left;
+    /* font-weight: bold; */
+}
+
+.modal .info .dato-valor {
+    text-align: right;
+}
+
+/*Logos descarga*/
+.contenedor-descargas {
+    margin: 1em;
+}
+
+.contenedor-descargas img {
+    padding: 0.4em;
+}
+
+.imagen-descarga {
+    width: 60%;
+}
+

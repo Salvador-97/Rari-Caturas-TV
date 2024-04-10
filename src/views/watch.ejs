@@ -29,20 +29,51 @@
                 </div>
 
                 <button class="boton-info" id="openModal"><i
-                        class="fa-solid fa-circle-info"
-                        aria-hidden="true"></i>Información</button>
+                        class="fa-solid fa-circle-info"></i>Información</button>
                 <dialog class="modal" id="mainModal">
                     <div class="titulo-info">
                         <h2>Información</h2>
                     </div>
                     <div class="info">
-                        <h3><b>Resolución:</b> 1920x1080</h3>
-                        <h3><b>Idioma:</b> Latino/Inglés</h3>
-                        <h3><b>Subtitulos:</b> Español</h3>
-                        <h3><b>Peso:</b> 1.5 GB x Episodio</h3>
+                        <div>
+                            <h3 class="dato">Resolución:</h3>
+                            <h3 class="dato">Idioma:</h3>
+                            <h3 class="dato">Subtitulos:</h3>
+                            <h3 class="dato">Peso x episodio:</h3>
+                        </div>
+                        <div>
+                            <h3 class="dato-valor"><%= info.resolucion %></h3>
+                            <h3 class="dato-valor"><%= info.idioma %></h3>
+                            <h3 class="dato-valor"><%= info.subtitulos %></h3>
+                            <h3 class="dato-valor"><%= info.peso %></h3>
+                        </div>
                     </div>
                     <!-- <button onclick="closeModal()">Cerrar</button> -->
+                    <!-- <div class="contenedor-descarga"> -->
+
                     <button class="btn-cerrar" id="closeModal">Cerrar</button>
+                    <!-- </div> -->
+                </dialog>
+                <button class="btn-descargar" id="modal-descargar"><i
+                        class="fa-solid fa-circle-down"></i></button>
+                <dialog class="modal" id="mainModalDescarga">
+                    <div class="titulo-info">
+                        <h2>Opciones de descarga</h2>
+                    </div>
+                    <!-- <h3></h3> -->
+                    <div class="contenedor-descargas">
+                        <a href="<%= info.drive %>" target="_blank">
+                            <img src="/images/logos/drive_logo.png"
+                                class="imagen-descarga" alt>
+                        </a>
+                        <a href><img src="/images/logos/mediafire_logo.png"
+                                class="imagen-descarga" alt></a>
+                    </div>
+                    <!-- <button onclick="closeModal()">Cerrar</button> -->
+                    <!-- <div class="contenedor-descarga"> -->
+
+                    <button class="btn-cerrar" id="closeModalD">Cerrar</button>
+                    <!-- </div> -->
                 </dialog>
             </div>
         </div>
