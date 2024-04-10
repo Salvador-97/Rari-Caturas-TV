@@ -1,0 +1,9 @@
+body {
+    background: #282828;
+}
+
+.mensaje-404 {
+    width: 80%;
+    display: flex;
+    margin: 4em auto;
+}
