@@ -76,11 +76,11 @@ controller.watch = (req, res) => {
 
 
 controller.episodes = (req, res) => {
-    console.log('YA ENTRO');
+    // console.log('YA ENTRO');
     const { temporada } = req.params;
     const { nombre } = req.params;
-    console.log(temporada);
-    console.log(nombre);
+    // console.log(temporada);
+    // console.log(nombre);
     req.getConnection((error, conexion) => {
         if (error) {
             res.json(error);
@@ -90,10 +90,15 @@ controller.episodes = (req, res) => {
                     res.json(error);
                 } else {
                     // console.log(capitulo);
-                    console.log(capitulo[0].link);
-                    res.render('episode-page', {
-                        capitulo: capitulo[0]
-                    })
+                    if (capitulo[0].link != 'doodstream') {
+                        console.log(capitulo[0].link);
+                        res.render('episode-page', {
+                            capitulo: capitulo[0]
+                        })
+                    }else {
+                        res.status(404).sendFile(path.join(path404.dir , '/public/pages/404.html'));
+                    }
+                    // console.log(capitulo[0].link);
                 }
             });
         }
