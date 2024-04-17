@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/error-style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
+            rel="stylesheet">
+        <link rel="shortcut icon" href="/images/error/cerca.png"
+            type="image/x-icon">
+        <title><%= error %></title>
+    </head>
+    <body>
+        <div class="contenedor-error">
+            <h1 class="tipo-error">¡ERROR!<br> <%= error %></h1>
+            <img src="/images/error/error-404.png" alt="" class="imagen-error">
+            <% if (id) { %>
+            <a href="/watch/<%= id %>/<%= temporada %>"
+                class="btn-volver">Volver</a>
+            <% } else { %>
+            <a href="/" class="btn-volver">Volver</a>
+            <%}%>
+        </div>
+    </body>
+</html>

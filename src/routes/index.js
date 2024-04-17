@@ -7,5 +7,6 @@ router.get('/', seriesController.start);
 router.get('/watch/:id', seriesController.watch);
 router.get('/watch/:id/:temporada', seriesController.watch);
 router.get('/watch/:id/:temporada/:nombre', seriesController.episodes);
+router.get('/proximamente', seriesController.proximamente);
 
 module.exports = router;

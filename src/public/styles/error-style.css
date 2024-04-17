@@ -1,9 +1,54 @@
 body {
     background: #282828;
+    background-image: url(/images/error/background.PNG);
+    object-fit: scale-down;
 }
 
 .mensaje-404 {
     width: 80%;
     display: flex;
     margin: 4em auto;
+}
+
+.contenedor-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tipo-error {
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    font-size: 5em;
+    text-align: center;
+    /* text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87; */
+    /* text-shadow: 0 0 0.5em #9d0208, 0 0 0.2em #9d0208; */
+    /* margin: 0 auto; */
+}
+
+.btn-volver {
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #e9ecef;
+    font-size: 2em;
+    text-decoration: none;
+    background-color: #c1121f;
+    padding: 0.4em 1em;
+    border-radius: 0.3em;
+    transition: all 0.4s;
+}
+
+.btn-volver:hover {
+    background-color: #80b918;
+    color: #fff;
+}
+
+.imagen-error {
+    width: 15%;
+    padding-bottom: 3em;
+    filter: drop-shadow(0 0 0.5rem #99ef8f);
+    /* height: 10px; */
 }

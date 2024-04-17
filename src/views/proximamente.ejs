@@ -1,0 +1,23 @@
+<%- include('templates/_header') %>
+<link rel="stylesheet" href="/styles/tabla-style.css">
+
+<title>Proximamente</title>
+<table class="contenedor-tabla">
+    <tr>
+        <td>Nombre</td>
+        <td>Progreso</td>
+        <td>Votos</td>
+    </tr>
+    <% if (lista) { %>
+    <% for( let i = 0; i < lista.length; i++ ) { %>
+    <tr>
+        <td><img src="<%= lista[i].logo %>" alt></td>
+        <td><%= lista[i].progreso %></td>
+        <td><%= lista[i].voto %></td>
+    </tr>
+    <% } %>
+    <% } %>
+
+</table>
+
+<%- include('templates/_footer') %>
