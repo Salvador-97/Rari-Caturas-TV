@@ -5,12 +5,12 @@
     <div class="contenedor-banner"
         style="background: linear-gradient(rgba(0, 0, 0, .05) 0%, #000 100%), url('<%= serie.banner %>'); background-size: cover; background-position: top; height: 40em; width: 100%; display: flex; align-items: end;">
         <div class="descripcion-serie">
-            <div>
+            <div class="div-serie">
                 <img src="<%= serie.logo %>" alt class="logo-serie">
                 <!-- <img src="images/Logos/Aqua-Teen-Logo.png" alt class="logo-serie"> -->
             </div>
             <!-- Descripcion de la serie -->
-            <div><p class="contenedor-sinopsis">
+            <div class="div-serie"><p class="contenedor-sinopsis">
                     <%= serie.descripcion %>
                 </p>
             </div>
@@ -35,13 +35,13 @@
                         <h2>Información</h2>
                     </div>
                     <div class="info">
-                        <div>
+                        <div class="serie-info">
                             <h3 class="dato">Resolución:</h3>
                             <h3 class="dato">Idioma:</h3>
                             <h3 class="dato">Subtitulos:</h3>
                             <h3 class="dato">Peso x episodio:</h3>
                         </div>
-                        <div>
+                        <div class="serie-info">
                             <h3 class="dato-valor"><%= info.resolucion %></h3>
                             <h3 class="dato-valor"><%= info.idioma %></h3>
                             <h3 class="dato-valor"><%= info.subtitulos %></h3>

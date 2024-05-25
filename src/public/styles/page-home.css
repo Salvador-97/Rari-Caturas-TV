@@ -35,8 +35,8 @@
 
 .contenedor-posters img {
     width: 15em;
-    min-width: 20em;
-    max-width: 22em;
+    /* min-width: 20em;
+    max-width: 22em; */
     margin: 0 auto;
     transition: all 1s;
 }
