@@ -22,7 +22,7 @@
 
 /* Botones */
 .contenedor-botones{
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
 }
 
@@ -260,12 +260,70 @@
   
 /* Para 600px */  
 @media only screen and (max-width: 620px) and (min-width: 501px) {  
-  
+    .descripcion-serie .div-serie {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
 }  
   
 /* Para 480px */  
 @media only screen and (max-width: 500px) and (min-width: 341px) {  
-  
+    .contenedor-banner .contenedor-sinopsis {
+        font-size: 1em;
+        width: 15em;
+        margin: 0 auto;
+        color: #fff;
+    }
+    .descripcion-serie .div-serie {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .descripcion-serie {
+        margin: 0 2em 1em;
+        text-align: center;
+    }
+
+    .contenedor-banner .contenedor-sinopsis {
+        width: 100%;
+    }
+    .contenedor-botones {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contenedor-botones .boton-info {
+        margin-left: 0em;
+        padding: 6px 2.5em;
+    }
+    .modal {
+        width: 70%;
+    }
+    
+    .contenedor-botones .boton-temporadas{
+        margin-bottom: 0;
+        padding: 6px 3.5em;
+    }
+    .imagen-descarga {
+        width: 90%;
+    }
+    .contenedor-episodios h3 {
+        text-align: center;
+    }
+
+    .contenedor-episodios {
+        margin: 0px 2em;
+        margin-bottom: 4em;
+    }
+
+    .flex-episodios {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flex-episodios div {
+        width: 100%;
+    }
 }  
   
 /* Para 320px */  
@@ -280,8 +338,9 @@
         margin: 0 auto;
     }
     .descripcion-serie .div-serie {
+        display: flex;
+        justify-content: center;
         text-align: center;
-        flex-direction: column;
     }
     .contenedor-banner .logo-serie {
         width: 10em;
@@ -300,13 +359,16 @@
         margin-bottom: 0.5em;
     }
     .modal {
-        width: 9em;
+        width: 70%;
     }
     .modal .info {
         font-size: 0.6em;
     }
     .modal .btn-cerrar {
         font-size: 0.7em;
+    }
+    .imagen-descarga {
+        width: 90%;
     }
     .contenedor-episodios {
         width: 80%;

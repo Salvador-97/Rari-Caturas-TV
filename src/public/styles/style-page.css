@@ -225,14 +225,51 @@ footer {
     }
 
     .contenedor-posters-series img {
-        width: 20em;
+        /* width: 20em; */
         border-radius: 10px;
         /* border: 1px solid #fff; */
         box-shadow: 0px 0px 3px #fff;
     }
 
     footer {
+        flex-direction: column;
+    }
+
+    .contenedor-redes-sociales {
+        margin: 0 3em;
+    }
+
+    .titulo-sociales {
+        padding: 0;
+        text-align: center;
+    }
+
+    .redSocial {
         display: none;
+    }
+
+    .flex-redes {
+        justify-content: center;
+    }
+
+    .flex-redes ul {
+        display: flex;
+    }
+
+    .flex-redes div {
+        margin: 0;
+    }
+
+    .contenedor-preguntas {
+        margin: 0 3em;
+    }
+
+    .contenedor-preguntas h3 {
+        padding: 0;
+    }
+    .contenedor-preguntas a {
+        font-size: 1em;
+        text-align: center;
     }
 }
 
@@ -252,6 +289,8 @@ footer {
     .contenedor-posters img {
         width: 18em;
     }
+
+    
 }
 
 @media only screen and (min-width: 375px) and (max-width: 425px){
@@ -316,26 +355,10 @@ footer {
     .contenedor-posters-series img {
         width: 13em;
     }
-}
-
-@media only screen and (min-width: 570px) and (max-width: 650px){
-    .nombre-pagina {
-        font-size: 2.2em;
-    }
-    .imagen-titulo {
-        width: 3.5em;
-    }
-    .contenedor-mensaje p {
-        font-size: 0.8em;
-        text-align: center;
-    }
-    
-    .contenedor-posters img {
-        width: 15em;
-    }
-
-    .contenedor-posters-series img {
-        width: 15em;
+    .contenedor-redes-sociales {
+        display: flex;
+        flex-direction: column;
+        margin: 0 6em;
     }
 }
 
@@ -357,6 +380,34 @@ footer {
 
     .contenedor-posters-series img {
         width: 15em;
+    }
+    .footer {
+        margin: 0 2em;
+    }
+}
+
+@media only screen and (min-width: 570px) and (max-width: 650px){
+    .nombre-pagina {
+        font-size: 2.2em;
+    }
+    .imagen-titulo {
+        width: 3.5em;
+    }
+    .contenedor-mensaje p {
+        font-size: 0.8em;
+        text-align: center;
+    }
+    
+    .contenedor-posters img {
+        width: 15em;
+    }
+
+    .contenedor-posters-series img {
+        width: 15em;
+    }
+
+    .footer {
+        margin: 0 2em;
     }
 }
 
