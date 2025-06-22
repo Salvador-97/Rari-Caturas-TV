@@ -25,8 +25,15 @@
         <a href="/watch/<%= informacion[i].idSerie %>/">
             <img src="<%= informacion[i].poster %>"
             srcset="
-            <%= informacion[i].posterMobile %> 1500w,
-            <%= informacion[i].poster %> 2000w">
+            <%= informacion[i].posterMobile %> 320w, 
+            <%= informacion[i].posterMobile %> 480w,
+            <%= informacion[i].posterMobile %> 640w,
+            <%= informacion[i].posterMobile %> 768w,
+            <%= informacion[i].posterMobile %> 1024w,
+            <%= informacion[i].poster %> 1200w,
+            <%= informacion[i].poster %> 1440w
+            sizes="(max-width: 600px) 100vw, 800px"
+            >
         </a>
             <% } %>
             <% } %>
@@ -41,9 +48,15 @@
                 <img src="<%= serie[i].poster %>" 
                 srcset="
                 <%= serie[i].posterMobile %> 320w, 
-                <%= serie[i].posterMobile %> 480w, 
-                <%= serie[i].posterMobile %> 1500w, 
-                <%= serie[i].poster %> 2000w"></a> 
+                <%= serie[i].posterMobile %> 480w,
+                <%= serie[i].posterMobile %> 640w,
+                <%= serie[i].posterMobile %> 768w,
+                <%= serie[i].posterMobile %> 1024w,
+                <%= serie[i].poster %> 1200w, 
+                <%= serie[i].poster %> 1440w
+                sizes="(max-width: 600px) 100vw, 800px"
+                >
+            </a> 
         <% } %>
     </div>
 </div>

@@ -64,10 +64,10 @@
                     <div class="contenedor-descargas">
                         <a href="<%= info.drive %>" target="_blank">
                             <img src="/images/logos/drive_logo.png"
-                                class="imagen-descarga" alt>
+                                class="imagen-descarga" loading="lazy" alt>
                         </a>
                         <a href><img src="/images/logos/mediafire_logo.png"
-                                class="imagen-descarga" alt></a>
+                                class="imagen-descarga" loading="lazy" alt></a>
                     </div>
                     <!-- <button onclick="closeModal()">Cerrar</button> -->
                     <!-- <div class="contenedor-descarga"> -->
@@ -87,7 +87,7 @@
             <div>
                 <a
                     href="/watch/<%= serie.idSerie %>/<%= capitulos[i].idTemporada %>/<%= capitulos[i].nombre %>"><img
-                        src="<%= capitulos[i].caratula %>" alt></a>
+                        src="<%= capitulos[i].caratula %>" loading="lazy" alt></a>
                 <h4>Ep.<%= (i + 1) %> - <%= capitulos[i].nombre %></h4>
             </div>
             <% } %>
