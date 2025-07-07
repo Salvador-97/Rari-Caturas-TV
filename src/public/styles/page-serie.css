@@ -117,7 +117,7 @@
     display: flex;
     gap: 1em;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .flex-episodios div {
