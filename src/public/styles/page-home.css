@@ -4,13 +4,13 @@
 }
 
 body {
-    background: var(--fondo);
+    background: var(--fondo) !important;
     /*font-family: "Roboto Mono", monospace;*/
 }
 
 header {
     background: #242423;
-    padding: 1.5em;
+    padding: 1em;
     /* border: 4px solid #FFF; */
 }
 
@@ -96,6 +96,24 @@ a.activo {
     font-size: 2em;
     margin: 1em 3em;
     text-align: center;
+}
+
+.carousel-item {
+    height: 34em;
+}
+
+.carousel-caption {
+    padding-bottom: 3.25rem !important;
+}
+
+.contenedor-sinopsis-recomendadas {
+    width: 50%;
+    text-align: justify;
+    color: #FFF;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4em;
 }
 
 .contenedor-posters {
