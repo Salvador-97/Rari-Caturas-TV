@@ -98,12 +98,33 @@ a.activo {
     text-align: center;
 }
 
-.carousel-item {
-    height: 34em;
-}
-
 .carousel-caption {
     padding-bottom: 3.25rem !important;
+}
+
+.sombra-carrusel {
+    background: linear-gradient(rgba(0, 0, 0, .05) 0%, #000 100%);
+}
+
+.imagen-carrusel {
+    display: block;
+    margin: auto;
+    width: 100%;      /* o max-width */
+    height: 100%;     /* importante para que object-fit funcione */
+    object-fit: cover; /* o contain, según lo que quieras */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+}
+
+
+.degradado-negro {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  pointer-events: none;
 }
 
 .contenedor-sinopsis-recomendadas {
@@ -137,7 +158,7 @@ a.activo {
     margin: 1em 6em;
     margin-bottom: 4em;
     gap: 2em;
-    /* padding-left: 2em; */
+    padding-left: 2em;
 }
 
 /* Pie de página */
@@ -424,6 +445,10 @@ footer {
         font-size: 1.5em;
         padding-top: 0.7em;
     }
+    
+    .carousel-item {
+        height: 34em;
+    }
 
     .imagen-titulo {
         width: 3.5em;
@@ -437,7 +462,9 @@ footer {
         font-size: 0.8em;
         text-align: center;
     }
-    
+    .carousel-item {
+        height: 22em;
+    }
     .contenedor-posters img,
     .contenedor-posters-series img {
         width: 10em;
@@ -505,4 +532,9 @@ footer {
     .contenedor-preguntas{
         margin: 0 3em;
     }
+    
+    .carousel-item {
+        height: 30em;
+    }
+
 }
