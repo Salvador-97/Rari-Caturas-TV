@@ -10,7 +10,8 @@ body {
 
 header {
     background: #242423;
-    padding: 1em;
+    padding: clamp(1rem, 1vw, 1.5rem);
+    /* padding-top: 0; */
     /* border: 4px solid #FFF; */
 }
 
@@ -18,7 +19,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 5em;
+    margin: 0 clamp(1rem, 5vw, 3.5rem);
 }
 
 .contenedor-header a {
@@ -30,16 +31,14 @@ header {
 }
 
 .nombre-pagina {
-    /* color: #a663cc; */
     color: #fff;
-    font-size: 2.5em;
+    /* font-size: 2.5em; */
+    font-size: clamp(1.5rem, 5vw, 3rem);
     padding: 0.5em 0.5em 0 0.5em;
     font-family: "Creepster", system-ui;
     font-weight: 400;
     font-style: normal;
     transition: all 0.8s;
-    /* font-size: 40px; */
-    /* text-shadow: -1.5px 0 #fff, 0 1.5px #fff, 1.5px 0 #fff, 0 -1.5px #fff; */
 }
 
 .nombre-pagina:hover {
@@ -47,7 +46,7 @@ header {
 }
 
 .imagen-titulo {
-    width: 4em;
+    width: clamp(3rem, 7vw, 5rem);
     filter: drop-shadow(0 0 0.5rem #a663cc);
     object-fit: scale-down;
 }
@@ -56,11 +55,15 @@ header {
     font-family: "Concert One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.6em;
+    font-size:  clamp(1rem, 3vw, 2rem);
     color: #ced4da;
     text-decoration: none;
     margin-right: .5em;
     transition: all 0.8s;
+}
+
+.nav-principal {
+    padding-top: 1.5em;
 }
 
 .nav-principal a:hover,
@@ -269,7 +272,7 @@ footer {
         display: none;
     }
     .contenedor-header {
-        margin: 0 auto;
+        /* margin: 0 auto; */
         justify-content: center;
     }
     .titulo-logo-main {
@@ -350,12 +353,12 @@ footer {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 375px) {
-    .nombre-pagina {
+    /* .nombre-pagina {
         font-size: 1.8em;
-    }
-    .imagen-titulo {
+    } */
+    /* .imagen-titulo {
         width: 3.5em;
-    }
+    } */
     
     .contenedor-mensaje p {
         font-size: 0.6em;
@@ -370,12 +373,12 @@ footer {
 }
 
 @media only screen and (min-width: 375px) and (max-width: 425px){
-    .nombre-pagina {
+    /* .nombre-pagina {
         font-size: 1.8em;
-    }
-    .imagen-titulo {
+    } */
+    /* .imagen-titulo {
         width: 3.5em;
-    }
+    } */
     .contenedor-mensaje p {
         font-size: 1em;
         text-align: center;
@@ -391,12 +394,12 @@ footer {
 }
 
 @media only screen and (min-width: 425px) and (max-width: 480px){
-    .nombre-pagina {
+    /* .nombre-pagina {
         font-size: 2.2em;
-    }
-    .imagen-titulo {
+    } */
+    /* .imagen-titulo {
         width: 3.5em;
-    }
+    } */
     .contenedor-mensaje p {
         font-size: 0.8em;
         text-align: center;
@@ -416,12 +419,12 @@ footer {
 }
 
 @media only screen and (min-width: 480px) and (max-width: 570px){
-    .nombre-pagina {
+    /* .nombre-pagina {
         font-size: 2.2em;
-    }
-    .imagen-titulo {
+    } */
+    /* .imagen-titulo {
         width: 3.5em;
-    }
+    } */
     
     .contenedor-mensaje p {
         font-size: 0.8em;
@@ -448,25 +451,25 @@ footer {
 }
 
 @media only screen and (min-width: 570px) and (max-width: 650px){
-    .contenedor-header {
+    /* .contenedor-header {
         margin: 0 1em;
-    }
-    .nombre-pagina {
+    } */
+    /* .nombre-pagina {
         font-size: 1.5em;
         padding-top: 0.7em;
-    }
+    } */
     
     .carousel-item {
         height: 34em;
     }
 
-    .imagen-titulo {
+    /* .imagen-titulo {
         width: 3.5em;
-    }
+    } */
 
-    .nav-principal a {
+    /* .nav-principal a {
         font-size: 1.2em;
-    }
+    } */
 
     .contenedor-mensaje p {
         font-size: 0.8em;
@@ -499,14 +502,14 @@ footer {
 
 }
 @media only screen and (min-width: 651px) and (max-width: 768px){
-    .contenedor-header {
-        margin: 0 2em;
-    }
+    /* .contenedor-header {
+        margin: 0 1em;
+    } */
 
-    .nombre-pagina {
+    /* .nombre-pagina {
         font-size: 2em;
         padding-top: 0.6em;
-    }
+    } */
 
     .contenedor-preguntas {
         margin: 0em;
@@ -535,7 +538,15 @@ footer {
         font-size: 1em;
 }
 }
-@media only screen and (min-width: 768px) and (max-width: 1024){
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    /* .nombre-pagina {
+        font-size: 2em;
+    } */
+    /* .contenedor-header {
+        margin: 0 3em;
+    } */
+
+
     .contenedor-redes-sociales{
         margin: 0 3em;
     }
@@ -544,6 +555,18 @@ footer {
     }
     
     .carousel-item {
-        height: 30em;
+        height: 29em;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px){
+    .carousel-item {
+        height: 27em;
+    }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 2000px){
+    .carousel-item {
+        height: 31em;
     }
 }
