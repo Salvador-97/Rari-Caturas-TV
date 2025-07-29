@@ -3,7 +3,7 @@
 <title><%= serie.nombre %></title>
 <main class="contenedor-serie">
     <div class="contenedor-banner"
-        style="background: linear-gradient(rgba(0, 0, 0, .05) 0%, #000 100%), url('<%= serie.banner %>'); background-size: cover; background-position: top; height: 40em; width: 100%; display: flex; align-items: end;">
+        style="background: linear-gradient(rgba(0, 0, 0, .05) 0%, #000 100%), url('<%= serie.banner %>'); background-size: cover; background-position: top; height: 32em; width: 100%; display: flex; align-items: end;">
         <div class="descripcion-serie">
             <div class="div-serie">
                 <img src="<%= serie.logo %>" alt class="logo-serie">
@@ -30,7 +30,7 @@
 
                 <button class="boton-info" id="openModal"><i
                         class="fa-solid fa-circle-info"></i>Información</button>
-                <dialog class="modal" id="mainModal">
+                <dialog class="modalInfo" id="mainModal">
                     <div class="titulo-info">
                         <h2>Información</h2>
                     </div>
@@ -56,7 +56,7 @@
                 </dialog>
                 <button class="btn-descargar" id="modal-descargar"><i
                         class="fa-solid fa-circle-down"></i></button>
-                <dialog class="modal" id="mainModalDescarga">
+                <dialog class="modalInfo" id="mainModalDescarga">
                     <div class="titulo-info">
                         <h2>Opciones de descarga</h2>
                     </div>
