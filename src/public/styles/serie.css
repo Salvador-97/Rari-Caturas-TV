@@ -1,0 +1,19 @@
+.contenedor-episodios {
+    width: 100%;
+}
+
+.flex-episodios {
+    width: 90%;
+    display: grid;
+    margin: 0 auto;
+}
+
+.ctn-episodio {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.enlace-cap {
+    border: solid 1px #fff;
+}

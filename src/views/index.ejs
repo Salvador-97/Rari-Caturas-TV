@@ -42,7 +42,7 @@
                             <img src="<%= informacion[i].poster %>"" class="d-block imagen-carrusel" alt="...">
                             
                             <div class="carousel-caption d-none d-md-block">
-                                <p class="contenedor-sinopsis-recomendadas"><%= informacion[i].descripcion %></p>
+                                <div class="contenedor-sinopsis-recomendadas"><%= informacion[i].descripcion %></div>
                                 <a href="/watch/<%= informacion[i].idSerie %>" class="boton-info">Ver serie</a>
                             </div>
                         </div>
@@ -73,20 +73,19 @@
 </div>
 <div class="contenedor-series">
     <h2 class="titulo-series">Series</h2>
-    <div class="contenedor-posters-series">
+    <div class="contenedor-posters">
 
         <% for( let i = 0; i < serie.length; i++ ) { %>
             <a href="/watch/<%= serie[i].idSerie %>">
-                <img src="<%= serie[i].poster %>" 
+                <img class="img-serie" src="<%= serie[i].poster %>" 
                 srcset="
                 <%= serie[i].posterMobile %> 320w, 
                 <%= serie[i].posterMobile %> 480w,
-                <%= serie[i].posterMobile %> 640w,
                 <%= serie[i].posterMobile %> 768w,
                 <%= serie[i].posterMobile %> 1024w,
                 <%= serie[i].poster %> 1200w, 
-                <%= serie[i].poster %> 1440w
-                sizes="(max-width: 600px) 100vw, 800px"
+                <%= serie[i].poster %> 1440w"
+                sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 800px"
                 >
             </a> 
         <% } %>

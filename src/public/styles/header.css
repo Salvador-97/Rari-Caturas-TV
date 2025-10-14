@@ -1,0 +1,88 @@
+@import url('./base/variables.css');
+
+header {
+    background: var(--headerColor);
+}
+
+.contenedor-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-logo-main {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    margin: 1rem auto;
+    z-index: 10;
+}
+
+.ctn-titulo {
+    display: flex;
+    justify-content: center;
+}
+
+.ctn-icon-nav {
+    width: 20%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn-nav {
+    background-color: var(--headerColor);
+    border: none;
+}
+
+.logo-pagina {
+    width: 15%
+}
+
+.nombre-pagina {
+    text-decoration: none;
+    color: var(--letraHeader);
+    margin-left: 0.5rem;
+    font-size: clamp(1.5rem, 8vw, 3rem);
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 0.8s;
+}
+
+.icono-nav {
+    color: var(--letraHeader);
+    font-size: clamp(1.5rem, 8vw, 3rem);
+}
+
+.nav-principal {
+    background-color: var(--headerColor);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+    transition: all 200ms ease-in-out, opacity 200ms linear;
+}
+
+.ver-nav {
+    border-top: solid 1px #000;
+    opacity: 1;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: var(--letraHeader);
+    font-size: clamp(1rem, 4vw, 3rem);
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    
+}
