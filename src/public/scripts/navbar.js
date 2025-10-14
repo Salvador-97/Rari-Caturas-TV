@@ -7,7 +7,8 @@ botonNav.addEventListener('click', e => {
     const header = document.querySelector('.contenedor-header');
 
     alturaHeader = header.offsetHeight;
-    console.log("Altura", alturaHeader)
+
+    // Revisar cuando haga el cambio a fetch
 
     if (navLinks.classList.contains('ver-nav')) {
         navLinks.classList.remove('ver-nav');

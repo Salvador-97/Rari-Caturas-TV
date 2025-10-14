@@ -7,30 +7,31 @@
         <div class="contenedor-banner"
             style="background: linear-gradient(rgba(0, 0, 0, .05) 0%, #000 100%), url('<%= serie.banner %>'); background-size: cover; background-position: top; height: 32em; width: 100%; display: flex; align-items: end;">
             <div class="descripcion-serie">
-                <div class="div-serie">
-                    <img src="<%= serie.logo %>" alt class="logo-serie">
+                <div class="logo-serie">
+                    <img src="<%= serie.logo %>" alt">
                     <!-- <img src="images/Logos/Aqua-Teen-Logo.png" alt class="logo-serie"> -->
                 </div>
                 <!-- Descripcion de la serie -->
-                <div class="div-serie">
+                <div class="info-serie">
                     <p class="contenedor-sinopsis">
                         <%= serie.descripcion %>
                     </p>
                 </div>
                 <!-- MENU DESPLEGAGLE -->
-                <div class="contenedor-botones">
-                    <div class="nav-desplegable">
-                        <button class="boton-temporadas">Temporadas <i class="fa-solid fa-angle-down"></i></button>
-                        <div class="nav-contenedor">
-                            <% for( let i=0; i < serie.noTemporadas; i++ ) { %>
-                                <a href="/watch/<%= serie.idSerie %>/<%= serie.season %><%= (i + 1) %>">Temporada
-                                    <%= (i + 1)%>
-                                </a>
-                                <% } %>
-                        </div>
+                <div class="ctn-temporadas">
+                    <button class="btn-temporadas" type="button">Temporadas <i class="fa-solid fa-angle-down"></i></button>
+                    <div class="nav-temporadas">
+                        <% for( let i=0; i < serie.noTemporadas; i++ ) { %>
+                            <a href="/watch/<%= serie.idSerie %>/<%= serie.season %><%= (i + 1) %>"
+                                class="link-temporada link-deshabilitado">
+                                Temporada
+                                <%= (i + 1)%>
+                            </a>
+                            <% } %>
                     </div>
-
-                    <button class="boton-info" id="openModal"><i
+                </div>
+                <div class="ctn-descarga">
+                    <button class="btn-informacion" id="openModal"><i
                             class="fa-solid fa-circle-info"></i>Información</button>
                     <dialog class="modalInfo" id="mainModal">
                         <div class="titulo-info">
@@ -87,20 +88,24 @@
             </div>
         </div>
         <div class="contenedor-episodios">
-            <h3>Episodios</h3>
+            <h3 class="fuente">Episodios</h3>
             <div class="flex-episodios">
                 <!-- Listado de episodios -->
                 <% if (capitulos) { %>
                     <% for( let i=0; i < capitulos.length; i++ ) { %>
-                        <div class="ctn-episodio">
-                            <a class="enlace-cap"
-                                href="/watch/<%= serie.idSerie %>/<%= capitulos[i].idTemporada %>/<%= capitulos[i].nombre %>">
+                        <a href="/watch/<%= serie.idSerie %>/<%= capitulos[i].idTemporada %>/<%= capitulos[i].nombre %>"
+                            class="ctn-episodio fuente">
+                            <div class="ctn-img">
                                 <img src="<%= capitulos[i].caratula %>" loading="lazy" alt>
-                            </a>
-                            <h4>Ep.<%= (i + 1) %> - <%= capitulos[i].nombre %></h4>
-                        </div>
-                    <% } %>
-                <% } %>
+                            </div>
+                            <div class="titulo-cap">
+                                <h4>
+                                    <%= (i + 1) %> - <%= capitulos[i].nombre %>
+                                </h4>
+                            </div>
+                        </a>
+                        <% } %>
+                            <% } %>
             </div>
         </div>
     </main>
