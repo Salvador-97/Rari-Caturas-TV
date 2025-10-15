@@ -37,15 +37,16 @@
             <div class="carousel-inner">
             <% for( let i = 0; i < informacion.length ; i++) { %>
                     <% if (i == 0) { %>
-                        <div class="carousel-item active">
+                        <a href="/watch/<%= serie[i].idSerie %>" class="carousel-item active">
                             <div class="degradado-negro"></div>
                             <img src="<%= informacion[i].poster %>"" class="d-block imagen-carrusel" alt="...">
                             
                             <div class="carousel-caption d-none d-md-block">
+                                <img src="<%= serie[i].logo %>" class="logo-serie-banner" alt="">
                                 <div class="contenedor-sinopsis-recomendadas"><%= informacion[i].descripcion %></div>
-                                <a href="/watch/<%= informacion[i].idSerie %>" class="boton-info">Ver serie</a>
+                                <!-- <a href="/watch/<%= informacion[i].idSerie %>" class="boton-info">Ver serie</a> -->
                             </div>
-                        </div>
+                        </a>
                         
                     <% } else { %>
                         <div class="carousel-item">
@@ -77,15 +78,7 @@
 
         <% for( let i = 0; i < serie.length; i++ ) { %>
             <a href="/watch/<%= serie[i].idSerie %>">
-                <img class="img-serie" src="<%= serie[i].poster %>" 
-                srcset="
-                <%= serie[i].posterMobile %> 320w, 
-                <%= serie[i].posterMobile %> 480w,
-                <%= serie[i].posterMobile %> 768w,
-                <%= serie[i].posterMobile %> 1024w,
-                <%= serie[i].poster %> 1200w, 
-                <%= serie[i].poster %> 1440w"
-                sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 800px"
+                <img class="img-serie" src="<%= serie[i].posterMobile %>"
                 >
             </a> 
         <% } %>

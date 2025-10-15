@@ -5,8 +5,23 @@ body {
     min-height: 100vh;
 }
 
+.contenedor-series-recomendadas {
+    height: 15vh;
+}
+
+.carousel-inner,
+.carousel {
+    height: 100%;
+}
+
 .imagen-carrusel {
-    width: 100%
+    width: 100%;
+    height: 35rem;
+    object-fit: cover;
+}
+
+.logo-serie-banner {
+    width: 20%;
 }
 
 .contenedor-series {
@@ -39,7 +54,7 @@ body {
 .contenedor-sinopsis-recomendadas {
     font-size: clamp(1rem, 1vw, 3rem);
     font-family: "Spectral", serif;
-    font-weight: 800;
+    font-weight: 500;
     font-style: normal;
     color: var(--letraHeader);
 }
@@ -65,14 +80,58 @@ body {
     pointer-events: none;
 }
 
-
-@media screen and (min-width:768px) and (max-width: 1024px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
     .contenedor-posters {
         width: 90%;
         display: grid;
         justify-content: center;
         margin: 0 auto;
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width: 1023px) {
+    .contenedor-posters {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+/* Cambio de navbar */
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .contenedor-series-recomendadas {
+        height: 20vh;
+    }
+
+    .contenedor-posters {
+        width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+    .contenedor-series-recomendadas {
+        height: 35vh;
+    }
+    
+    .contenedor-posters {
+        width: 90%;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .contenedor-series-recomendadas {
+        height: 40vh;
+    }
+    
+    .contenedor-posters {
+        width: 90%;
+        grid-template-columns: repeat(4, 1fr);
         gap: 1rem;
     }
 }

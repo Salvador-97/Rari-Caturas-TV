@@ -5,86 +5,94 @@
     </title>
     <main class="contenedor-serie">
         <div class="contenedor-banner"
-            style="background: linear-gradient(rgba(0, 0, 0, .05) 0%, #000 100%), url('<%= serie.banner %>'); background-size: cover; background-position: top; height: 32em; width: 100%; display: flex; align-items: end;">
+            style="background: linear-gradient(rgba(0, 0, 0, .05) 0%, #000 100%), url('<%= serie.banner %>'); background-size: cover; background-position: top; height: 85vh; width: 100%; display: flex; align-items: end;">
             <div class="descripcion-serie">
-                <div class="logo-serie">
-                    <img src="<%= serie.logo %>" alt">
-                    <!-- <img src="images/Logos/Aqua-Teen-Logo.png" alt class="logo-serie"> -->
-                </div>
-                <!-- Descripcion de la serie -->
-                <div class="info-serie">
-                    <p class="contenedor-sinopsis">
-                        <%= serie.descripcion %>
-                    </p>
-                </div>
-                <!-- MENU DESPLEGAGLE -->
-                <div class="ctn-temporadas">
-                    <button class="btn-temporadas" type="button">Temporadas <i class="fa-solid fa-angle-down"></i></button>
-                    <div class="nav-temporadas">
-                        <% for( let i=0; i < serie.noTemporadas; i++ ) { %>
-                            <a href="/watch/<%= serie.idSerie %>/<%= serie.season %><%= (i + 1) %>"
-                                class="link-temporada link-deshabilitado">
-                                Temporada
-                                <%= (i + 1)%>
-                            </a>
-                            <% } %>
+                <!-- <div> -->
+                    <div class="logo-serie">
+                        <img src="<%= serie.logo %>" alt">
+                        <!-- <img src="images/Logos/Aqua-Teen-Logo.png" alt class="logo-serie"> -->
                     </div>
-                </div>
-                <div class="ctn-descarga">
-                    <button class="btn-informacion" id="openModal"><i
-                            class="fa-solid fa-circle-info"></i>Información</button>
-                    <dialog class="modalInfo" id="mainModal">
-                        <div class="titulo-info">
-                            <h2>Información</h2>
-                        </div>
-                        <div class="info">
-                            <div class="serie-info">
-                                <h3 class="dato">Resolución:</h3>
-                                <h3 class="dato">Idioma:</h3>
-                                <h3 class="dato">Subtitulos:</h3>
-                                <h3 class="dato">Peso x episodio:</h3>
-                            </div>
-                            <div class="serie-info">
-                                <h3 class="dato-valor">
-                                    <%= info.resolucion %>
-                                </h3>
-                                <h3 class="dato-valor">
-                                    <%= info.idioma %>
-                                </h3>
-                                <h3 class="dato-valor">
-                                    <%= info.subtitulos %>
-                                </h3>
-                                <h3 class="dato-valor">
-                                    <%= info.peso %>
-                                </h3>
-                            </div>
-                        </div>
-                        <!-- <button onclick="closeModal()">Cerrar</button> -->
-                        <!-- <div class="contenedor-descarga"> -->
+                    <!-- Descripcion de la serie -->
+                    <div class="info-serie">
+                        <p class="contenedor-sinopsis">
+                            <%= serie.descripcion %>
+                        </p>
+                    </div>
+                <!-- </div> -->
 
-                        <button class="btn-cerrar" id="closeModal">Cerrar</button>
-                        <!-- </div> -->
-                    </dialog>
-                    <button class="btn-descargar" id="modal-descargar"><i class="fa-solid fa-circle-down"></i></button>
-                    <dialog class="modalInfo" id="mainModalDescarga">
-                        <div class="titulo-info">
-                            <h2>Opciones de descarga</h2>
+                <!-- MENU DESPLEGAGLE -->
+                <!-- <div> -->
+                    <div class="ctn-temporadas">
+                        <button class="btn-temporadas" type="button">Temporadas <i
+                                class="fa-solid fa-angle-down"></i></button>
+                        <div class="nav-temporadas">
+                            <% for( let i=0; i < serie.noTemporadas; i++ ) { %>
+                                <a href="/watch/<%= serie.idSerie %>/<%= serie.season %><%= (i + 1) %>"
+                                    class="link-temporada link-deshabilitado">
+                                    Temporada
+                                    <%= (i + 1)%>
+                                </a>
+                                <% } %>
                         </div>
-                        <!-- <h3></h3> -->
-                        <div class="contenedor-descargas">
-                            <a href="<%= info.drive %>" target="_blank">
-                                <img src="/images/logos/drive_logo.png" class="imagen-descarga" loading="lazy" alt>
-                            </a>
-                            <a href><img src="/images/logos/mediafire_logo.png" class="imagen-descarga" loading="lazy"
-                                    alt></a>
-                        </div>
-                        <!-- <button onclick="closeModal()">Cerrar</button> -->
-                        <!-- <div class="contenedor-descarga"> -->
+                    </div>
+                    <div class="ctn-descarga">
+                        <button class="btn-informacion" id="openModal"><i
+                                class="fa-solid fa-circle-info"></i>Información</button>
+                        <dialog class="modalInfo" id="mainModal">
+                            <div class="titulo-info">
+                                <h2>Información</h2>
+                            </div>
+                            <div class="info">
+                                <div class="serie-info">
+                                    <h3 class="dato">Resolución:</h3>
+                                    <h3 class="dato">Idioma:</h3>
+                                    <h3 class="dato">Subtitulos:</h3>
+                                    <h3 class="dato">Peso x episodio:</h3>
+                                </div>
+                                <div class="serie-info">
+                                    <h3 class="dato-valor">
+                                        <%= info.resolucion %>
+                                    </h3>
+                                    <h3 class="dato-valor">
+                                        <%= info.idioma %>
+                                    </h3>
+                                    <h3 class="dato-valor">
+                                        <%= info.subtitulos %>
+                                    </h3>
+                                    <h3 class="dato-valor">
+                                        <%= info.peso %>
+                                    </h3>
+                                </div>
+                            </div>
+                            <!-- <button onclick="closeModal()">Cerrar</button> -->
+                            <!-- <div class="contenedor-descarga"> -->
 
-                        <button class="btn-cerrar" id="closeModalD">Cerrar</button>
-                        <!-- </div> -->
-                    </dialog>
-                </div>
+                            <button class="btn-cerrar" id="closeModal">Cerrar</button>
+                            <!-- </div> -->
+                        </dialog>
+                        <button class="btn-descargar" id="modal-descargar"><i
+                                class="fa-solid fa-circle-down"></i></button>
+                        <dialog class="modalInfo" id="mainModalDescarga">
+                            <div class="titulo-info">
+                                <h2>Opciones de descarga</h2>
+                            </div>
+                            <!-- <h3></h3> -->
+                            <div class="contenedor-descargas">
+                                <a href="<%= info.drive %>" target="_blank">
+                                    <img src="/images/logos/drive_logo.png" class="imagen-descarga" loading="lazy" alt>
+                                </a>
+                                <a href><img src="/images/logos/mediafire_logo.png" class="imagen-descarga"
+                                        loading="lazy" alt></a>
+                            </div>
+                            <!-- <button onclick="closeModal()">Cerrar</button> -->
+                            <!-- <div class="contenedor-descarga"> -->
+
+                            <button class="btn-cerrar" id="closeModalD">Cerrar</button>
+                            <!-- </div> -->
+                        </dialog>
+                    </div>
+                <!-- </div> -->
+
             </div>
         </div>
         <div class="contenedor-episodios">

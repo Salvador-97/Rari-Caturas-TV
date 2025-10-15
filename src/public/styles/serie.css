@@ -17,7 +17,8 @@
 }
 
 .logo-serie {
-    width: 70%;
+    width: clamp(9rem, 2vw, 14rem);
+    margin: 1rem auto;
 }
 
 .ctn-temporadas {
@@ -131,4 +132,77 @@
 
 .titulo-cap {
     margin: 0.8rem;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 481px) and (max-width: 768px){
+    .ctn-temporadas, .ctn-descarga {
+        width: clamp(11rem, 6vw, 12rem);
+    }
+    .info-serie {
+        width: clamp(18rem, 6vw, 20rem);
+    }
+    .flex-episodios {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .ctn-temporadas, .ctn-descarga {
+        width: clamp(11rem, 6vw, 12rem);
+    }
+    .info-serie {
+        width: clamp(18rem, 6vw, 20rem);
+    }
+    /* .logo-serie {
+        width: 20%;
+    } */
+    .flex-episodios {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    .ctn-temporadas, .ctn-descarga {
+        width: clamp(11rem, 6vw, 12rem);
+    }
+    .info-serie {
+        width: clamp(18rem, 6vw, 20rem);
+    }
+    .flex-episodios {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1439px) {
+    .ctn-temporadas, .ctn-descarga {
+        width: clamp(11rem, 6vw, 12rem);
+    }
+    .info-serie {
+        width: clamp(18rem, 6vw, 20rem);
+    }
+    .flex-episodios {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .ctn-temporadas, .ctn-descarga {
+        width: clamp(11rem, 6vw, 12rem);
+    }
+    .info-serie {
+        width: clamp(18rem, 6vw, 20rem);
+    }
+
+    /* .logo-serie {
+        width: 15%;
+    } */
+    .flex-episodios {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+    }
 }

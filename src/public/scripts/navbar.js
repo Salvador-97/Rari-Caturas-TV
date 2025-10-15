@@ -1,20 +1,28 @@
-const botonNav = document.getElementById('btn-nav');
+const botonNav = document.querySelector('.btn-nav');
 
 botonNav.addEventListener('click', e => {
     e.preventDefault();
 
-    const navLinks = document.getElementById('ctn-navbar');
-    const header = document.querySelector('.contenedor-header');
+    const btnTemporadas = document.querySelector('.btn-temporadas');
+    const navLinks = document.querySelector('.nav-principal');
+    const links = document.querySelectorAll('.nav-links');
 
-    alturaHeader = header.offsetHeight;
 
+    //Tengo que habilitar todos los links
     // Revisar cuando haga el cambio a fetch
 
-    if (navLinks.classList.contains('ver-nav')) {
-        navLinks.classList.remove('ver-nav');
-        navLinks.style.transform = `translateY(${-alturaHeader}px)`;
+    if (navLinks.classList.contains('habilitado')) {
+        navLinks.classList.remove('habilitado');
+        links.forEach(link => {
+            link.classList.add('link-deshabilitado');
+            link.classList.remove('link-habilitado')
+        });
     } else {
-        navLinks.classList.add('ver-nav');
-        navLinks.style.transform = `translateY(${alturaHeader}px)`;
+        navLinks.classList.add('habilitado');
+        links.forEach(link => {
+            link.classList.add('link-habilitado');
+            link.classList.remove('link-deshabilitado')
+        });
     }
+
 })
