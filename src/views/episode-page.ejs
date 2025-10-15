@@ -3,19 +3,18 @@
 <title><%= capitulo.nombre %></title>
 <main class="contenedor-serie">
     <div class="contenedor-episodio">
-        <iframe src="<%= capitulo.link %>" allowfullscreen="true"></iframe>
-        
+        <iframe class="ctn-video" src="<%= capitulo.link %>" allowfullscreen="true"></iframe>
     </div>
-    <div class="seccion-episodio">
+    <!-- <div class="seccion-episodio">
         <div>
             <h4><%= capitulo.nombre %></h4>
         </div>
         <div>
-            <button><i class="fa-solid fa-comment"></i></button>
-            <button><i class="fa-solid fa-poo"></i></button>
-            <button><i class="fa-solid fa-heart"></i></button>
-            <button><i class="fa-solid fa-circle-down"></i></button>
+            <button class="btn-icono"><i class="fa-solid fa-comment"></i></button>
+            <button class="btn-icono"><i class="fa-solid fa-poo"></i></button>
+            <button class="btn-icono"><i class="fa-solid fa-heart"></i></button>
+            <button class="btn-icono"><i class="fa-solid fa-circle-down"></i></button>
         </div>
-    </div>
+    </div> -->
 
 <%- include('templates/_footer') %>
