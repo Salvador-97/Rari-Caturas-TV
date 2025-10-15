@@ -39,6 +39,7 @@ body {
 }
 
 .contenedor-posters {
+    width: 90%;
     display: inline-grid;
     justify-content: center;
     grid-template-columns: 80%;
@@ -82,20 +83,16 @@ body {
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
     .contenedor-posters {
-        width: 90%;
         display: grid;
         justify-content: center;
         margin: 0 auto;
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
     }
 }
 
 @media screen and (min-width:768px) and (max-width: 1023px) {
     .contenedor-posters {
-        width: 90%;
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
     }
 }
 
@@ -106,9 +103,7 @@ body {
     }
 
     .contenedor-posters {
-        width: 90%;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
     }
 }
 
@@ -118,9 +113,7 @@ body {
     }
     
     .contenedor-posters {
-        width: 90%;
         grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
     }
 }
 
@@ -128,10 +121,7 @@ body {
     .contenedor-series-recomendadas {
         height: 40vh;
     }
-    
     .contenedor-posters {
-        width: 90%;
         grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
     }
 }
