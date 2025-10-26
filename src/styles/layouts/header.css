@@ -1,0 +1,128 @@
+@import url('./base/variables.css');
+
+header {
+    background: var(--headerColor);
+}
+
+header {
+    width: 100%;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titulo-logo-main {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.ctn-titulo {
+    display: flex;
+    justify-content: center;
+}
+
+.ctn-icon-nav {
+    width: 20%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn-nav {
+    background-color: var(--headerColor);
+    border: none;
+}
+
+.logo-pagina {
+    width: 15%
+}
+
+.nombre-pagina {
+    text-decoration: none;
+    color: var(--letraHeader);
+    margin-left: 0.5rem;
+    font-size: clamp(1.5rem, 8vw, 3rem);
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 0.8s;
+}
+
+.icono-nav {
+    color: var(--letraHeader);
+    font-size: clamp(1.5rem, 8vw, 3rem);
+}
+
+.nav-principal {
+    position: absolute;
+    background-color: var(--headerColor);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms ease-in-out, opacity 200ms linear;
+    opacity: 0;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: var(--letraHeader);
+    font-size: clamp(1rem, 4vw, 3rem);
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff
+}
+
+.nav-links {
+    text-decoration: none;
+    padding: 0.3rem 0;
+}
+
+.link-deshabilitado {
+    pointer-events: none;
+}
+
+.link-habilitado {
+    pointer-events: auto;
+}
+
+.habilitado {
+    opacity: 1;
+    z-index: 10;
+}
+
+@media screen and (min-width: 1024px) {
+    header {
+        position: inherit;
+        display: flex;
+    }
+
+    .nav-principal {
+        position: inherit;
+        flex-direction: row;
+        justify-content: space-evenly;
+        opacity: 1;
+    }
+
+    .nombre-pagina {
+        font-size: clamp(1.5rem, 3vw, 4rem);
+    }
+
+    .btn-nav {
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .nav-links {
+        text-decoration: none;
+        color: var(--letraHeader);
+        font-size: clamp(1rem, 2vw, 2.5rem);
+    }
+}
