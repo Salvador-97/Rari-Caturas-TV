@@ -1,2 +1,32 @@
-/node_modules
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
 .env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# MongoDB local database filesdata/
+dump/
+
+# Build folders
+dist/
+build/
+
+# VSCode
+.vscode/
+
+# JetBrains
+*.iml
+.idea/
+
+# Reques
+*.http

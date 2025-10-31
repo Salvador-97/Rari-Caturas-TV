@@ -18,5 +18,3 @@ Cada una de las series cuenta con su propia página en donde se encuentran las t
 Como se puede observar se tiene una sección de las temporadas y la opción de "Información" la cual muestra todo lo relevante a la serie, desde la resolución, idioma y peso de cada capitulo. Asimismo, tiene un botón para descargar la temporada seleccionada.
 
 ![Temporadas](/src/public/images/readme/Temporada.gif)
-
-

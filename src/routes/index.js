@@ -1,12 +1,10 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
 
-const seriesController = require('../controllers/controllerSeries');
+// Controlador opcional
+import { home, series } from '../controllers/controladorPrincipal.js';
 
-router.get('/', seriesController.start);
-router.get('/watch/:id', seriesController.watch);
-router.get('/watch/:id/:temporada', seriesController.watch);
-router.get('/watch/:id/:temporada/:nombre', seriesController.episodes);
-router.get('/proximamente', seriesController.proximamente);
+router.get('/', home);
+router.get('/watch/:id', series)
 
-module.exports = router;
+export default router;
