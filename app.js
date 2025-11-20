@@ -1,16 +1,16 @@
 import express from 'express';
-import router from './src/routes/index.js';
-import dotenv from 'dotenv'
+import 'dotenv/config'
+import './src/config/baseDatos.js'
+import rutas from './src/routes/rutas.js'
 
-dotenv.config();
 const app = express();
-const PORT = process.env.PORT || 3000;
+app.use(express.static('public'));
 
-app.use(express.json());
+app.use('/api', rutas);
 
-app.use('/', router);
-
-// Inicio del servidor
-app.listen(PORT, () => {
-    console.log(`Servidor en http://localhost:${PORT}`)
-});
+try {
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => console.log(`Servidor en el puerto http://localhost:${PORT}`))
+} catch (e) {
+    console.log(e);
+}
