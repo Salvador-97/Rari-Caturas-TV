@@ -6,24 +6,25 @@ header {
 
 header {
     width: 100%;
+    display: flex;
     align-items: center;
-    position: relative;
     margin: 0 auto;
     text-align: center;
+    height: 10vh;
 }
 
 .titulo-logo-main {
-    width: 80%;
+    width: 85%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin: 0 auto;
-    padding: 1rem 0;
 }
 
 .ctn-titulo {
     display: flex;
     justify-content: center;
+    width: 30%;
 }
 
 .ctn-icon-nav {
@@ -35,6 +36,7 @@ header {
 .btn-nav {
     background-color: var(--headerColor);
     border: none;
+    z-index: 10;
 }
 
 .logo-pagina {
@@ -50,6 +52,7 @@ header {
     font-weight: 400;
     font-style: normal;
     transition: all 0.8s;
+    width: 100%;
 }
 
 .icono-nav {
@@ -67,6 +70,7 @@ header {
     align-items: center;
     transition: all 200ms ease-in-out, opacity 200ms linear;
     opacity: 0;
+    z-index: 1;
 }
 
 .nav-links {
@@ -111,7 +115,7 @@ header {
     }
 
     .nombre-pagina {
-        font-size: clamp(1.5rem, 3vw, 4rem);
+        font-size: clamp(1.5rem, 2vw, 4rem);
     }
 
     .btn-nav {
