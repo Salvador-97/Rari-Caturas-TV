@@ -1,30 +1,32 @@
 const botonTemporadas = document.querySelector('.btn-temporadas');
+const navLinks = document.querySelector('.nav-temporadas');
 
 botonTemporadas.addEventListener('click', e => {
-    e.preventDefault();
-
-    const btnTemporadas = document.querySelector('.btn-temporadas');
-    const navLinks = document.querySelector('.nav-temporadas');
     const links = document.querySelectorAll('.link-temporada');
+    //Revisar clases
+    navLinks.classList.toggle('habilitado');
+    links.forEach(link => {
+        link.classList.toggle('link-habilitado')
+    })
+    // links.classList.toggle('link-habilitado')
+    e.stopPropagation();
+})
 
-
-    //Tengo que habilitar todos los links
-    // Revisar cuando haga el cambio a fetch
-
-    if (navLinks.classList.contains('habilitado')) {
+navLinks.addEventListener('click', e => {
+    if (e.target.classList.contains('link-temporada')) {
         navLinks.classList.remove('habilitado');
-        btnTemporadas.classList.remove('border-boton')
-        links.forEach(link => {
-            link.classList.add('link-deshabilitado');
-            link.classList.remove('link-habilitado')
-        });
-    } else {
-        navLinks.classList.add('habilitado');
-        btnTemporadas.classList.add('border-boton');
-        links.forEach(link => {
-            link.classList.add('link-habilitado');
-            link.classList.remove('link-deshabilitado')
-        });
     }
+    const links = document.querySelectorAll('.link-temporada');    
 
+    links.forEach(link => {
+        if(link.classList.contains('link-habilitado') && !link.contains(e.target)) {
+            link.classList.remove('link-habilitado');
+        }
+    })
+})
+
+document.addEventListener('click', e => {
+    if (navLinks.classList.contains('habilitado') && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('habilitado');
+    }
 })

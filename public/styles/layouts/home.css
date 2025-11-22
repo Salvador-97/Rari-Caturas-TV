@@ -39,7 +39,7 @@ body {
 }
 
 .contenedor-posters {
-    width: 90%;
+    width: 100%;
     display: inline-grid;
     justify-content: center;
     grid-template-columns: 80%;
@@ -103,6 +103,13 @@ body {
 }
 
 /* Cambio de navbar */
+
+@media screen and (min-width: 1024px){
+    .contenedor-posters {
+        width: 95%;
+    }
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
     .contenedor-series-recomendadas {
         height: 20vh;

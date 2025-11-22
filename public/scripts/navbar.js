@@ -7,9 +7,13 @@ botonNav.addEventListener('click', e => {
     const navLinks = document.querySelector('.nav-principal');
     const links = document.querySelectorAll('.nav-links');
 
+    
+
 
     //Tengo que habilitar todos los links
     // Revisar cuando haga el cambio a fetch
+
+    //Meter toggle para quitar y poner clases
 
     if (navLinks.classList.contains('habilitado')) {
         navLinks.classList.remove('habilitado');
