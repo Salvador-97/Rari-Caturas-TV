@@ -19,12 +19,11 @@ class seriesController {
                 recomendaciones
             });
         } catch (e) {
-            console.log(e);
             res.status(500).send(e);
         }
     }
 
-    async getHTML(req, res) {
+    async getHTMLSerie(req, res) {
         try {
             const ruta = path.join(process.cwd(), 'public/pages/watch.html');
 
@@ -32,6 +31,15 @@ class seriesController {
         } catch (e) {
             console.log(e);
             res.status(500).send(e);
+        }
+    }
+
+    async getHTMLCapitulo(req, res){
+        try {
+            const ruta = path.join(process.cwd(), 'public/pages/capitulo.html');
+            res.sendFile(ruta);
+        } catch (error) {
+            res.status(500).send(error);
         }
     }
 
@@ -49,15 +57,13 @@ class seriesController {
                 temporadaSerie = temporada;
             }
 
-            console.log(temporadaSerie)
-
             const informacion = await informacionSerie.find(
                 { 
                     idSerie: String(datos._id),
                     nombre: temporadaSerie
                 }
             );
-            const temporadaBuscar = await Capitulos.find({ idTemporada: temporadaSerie });
+            const temporadaBuscar = await Capitulos.find({ idTemporada: temporadaSerie }).sort({ idCapitulo: 1 });
             
             if (!datos) {
                 return res.status(404).json({ error: 'No encontrado' });
@@ -73,6 +79,17 @@ class seriesController {
             res.status(500).send(e);
         }
     }
+
+    async getCapitulo(req, res){
+        try {
+            const { id, temporada, capitulo } = req.params;
+
+            console.log(req.params)
+        } catch (error) {
+            console.log(error);
+        }
+    }
 }
+
 
 export default new seriesController();
