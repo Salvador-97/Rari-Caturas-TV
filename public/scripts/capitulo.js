@@ -8,10 +8,19 @@ axios.get(`/api/watch/${idSerie}/${temporada}/${capitulo}`)
         console.log("Datos: ", res.data.capitulo);
         const datosCapitulo = res.data.capitulo;
 
+        document.title = datosCapitulo.nombre;
+
+
         const frameCapitulo = document.querySelector('.ctn-video');
         const nombreCapitulo = document.querySelector('.nombre-capitulo');
 
-        frameCapitulo.src = datosCapitulo.link;
+        //Si no tiene el http no sabe que es un recurso externo
+        let link = datosCapitulo.link;
+        if (!link.startsWith("http")) {
+            link = "https://" + link;
+        }
+
+        frameCapitulo.src = link;
         nombreCapitulo.textContent = datosCapitulo.nombre;
     })
     .catch(err => console.log(err))
