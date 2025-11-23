@@ -74,6 +74,7 @@ export function crearCapitulos(datosSerie, capitulosSerie) {
         linkCapitulo.href = `/watch/${datosSerie._id}/${datosSerie.temporada1}/${capitulo._id}`;
         divCapitulo.classList.add('ctn-img');
         imgCapitulo.src = capitulo.caratula;
+        imgCapitulo.loading = 'lazy';
         divCapitulo.appendChild(imgCapitulo);
         linkCapitulo.appendChild(divCapitulo);
 

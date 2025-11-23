@@ -1,7 +1,7 @@
 import informacionSerie from "../models/informacionSerie.js";
 import Serie from "../models/Serie.js";
 import SerieRecomendada from "../models/seriesBanner.js";
-import Capitulos from "../models/Capitulos.js"
+import Capitulos from "../models/Capitulos.js";
 import path from 'path';
 
 class seriesController {
@@ -31,15 +31,6 @@ class seriesController {
         } catch (e) {
             console.log(e);
             res.status(500).send(e);
-        }
-    }
-
-    async getHTMLCapitulo(req, res){
-        try {
-            const ruta = path.join(process.cwd(), 'public/pages/capitulo.html');
-            res.sendFile(ruta);
-        } catch (error) {
-            res.status(500).send(error);
         }
     }
 
@@ -77,16 +68,6 @@ class seriesController {
         } catch (e) {
             console.log(e);
             res.status(500).send(e);
-        }
-    }
-
-    async getCapitulo(req, res){
-        try {
-            const { id, temporada, capitulo } = req.params;
-
-            console.log(req.params)
-        } catch (error) {
-            console.log(error);
         }
     }
 }
