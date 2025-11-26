@@ -57,7 +57,7 @@ header {
 
 .icono-nav {
     color: var(--letraHeader);
-    font-size: clamp(1.5rem, 8vw, 3rem);
+    font-size: 2rem
 }
 
 .nav-principal {
