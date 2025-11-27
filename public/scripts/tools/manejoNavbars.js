@@ -3,8 +3,14 @@ const navLinks = document.querySelector('.nav-temporadas');
 const botonNavPrincipal = document.querySelector('.btn-nav');
 const navPrincipalLinks = document.querySelector('.nav-principal');
 
-const alturaHeader = document.querySelector('.titulo-logo-main').offsetHeight;
-navPrincipalLinks.style.top = `${alturaHeader}px`;
+window.addEventListener('load', fixNav);
+window.addEventListener('resize', fixNav);
+
+function fixNav() {
+    const header = document.querySelector('.titulo-logo-main');
+    const nav = document.querySelector('.nav-principal');
+    nav.style.top = `${header.offsetHeight}px`;
+}
 
 botonNavPrincipal.addEventListener('click', e => {
     const links = document.querySelectorAll('.nav-links');

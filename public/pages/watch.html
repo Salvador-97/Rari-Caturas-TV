@@ -14,33 +14,36 @@
                 <div class="info-serie">
                 </div>
                 <div class="ctn-info-descarga">
-                    <div class="ctn-temporadas">
-                        <button class="btn-temporadas" type="button">Temporadas <i
-                                class="fa-solid fa-angle-down"></i></button>
-                        <div class="nav-temporadas">
+                    <div class="ctn-temporadas-info">
+                        <div class="ctn-temporadas">
+                            <button class="btn-temporadas" type="button">Temporadas <i
+                                    class="fa-solid fa-angle-down"></i></button>
+                            <div class="nav-temporadas">
+                            </div>
+                        </div>
+                        <div class="ctn-descarga">
+                            <button class="btn-informacion" id="openModal"><i
+                                    class="fa-solid fa-circle-info"></i>Información</button>
+                            <dialog class="modal-info" id="mainModal">
+                                <div class="titulo-info">
+                                    <h2>Información</h2>
+                                </div>
+                                <div class="informacion-descarga">
+                                    <!--Modificar esto con flex-->
+                                    <div class="serie-info">
+                                        <h3 class="dato">Resolución:</h3>
+                                        <h3 class="dato">Idioma:</h3>
+                                        <h3 class="dato">Subtitulos:</h3>
+                                        <h3 class="dato">Peso x episodio:</h3>
+                                    </div>
+                                    <div class="serie-info-datos">
+                                    </div>
+                                </div>
+                                <button class="btn-cerrar" id="closeModal">Cerrar</button>
+                            </dialog>
                         </div>
                     </div>
-                    <div class="ctn-descarga">
-                        <button class="btn-informacion" id="openModal"><i
-                                class="fa-solid fa-circle-info"></i>Información</button>
-                        <dialog class="modal-info" id="mainModal">
-                            <div class="titulo-info">
-                                <h2>Información</h2>
-                            </div>
-                            <div class="informacion-descarga">
-                                <!--Modificar esto con flex-->
-                                <div class="serie-info">
-                                    <h3 class="dato">Resolución:</h3>
-                                    <h3 class="dato">Idioma:</h3>
-                                    <h3 class="dato">Subtitulos:</h3>
-                                    <h3 class="dato">Peso x episodio:</h3>
-                                </div>
-                                <div class="serie-info-datos">
-                                </div>
-                            </div>
-                            <button class="btn-cerrar" id="closeModal">Cerrar</button>
-                        </dialog>
-                    </div>
+
                     <div class="ctn-boton-descarga">
                         <button class="btn-descargar" id="modal-descargar"><i
                                 class="fa-solid fa-circle-down"></i></button>

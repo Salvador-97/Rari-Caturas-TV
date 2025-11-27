@@ -1,34 +1,47 @@
-.contenedor-serie, .contenedor-episodio, .ctn-video {
+@import url('../base/variables.css');
+
+.contenedor-serie,
+.contenedor-episodio,
+.ctn-video {
     width: 100%;
 }
 
 .contenedor-episodio {
-    height: 20vh;
+    height: 40vh;
 }
 
 .ctn-video {
     height: 100%;
 }
 
-.seccion-episodio {
+.opciones-capitulo {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.navegacion-capitulos {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--letraHeader);
+    align-items: center;
+}
+
+.nombre-capitulo {
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--letraHeader);
+    display: flex;
     text-align: center;
-    color: #fff;
-    margin-top: 1rem;
-}
-
-.btn-icono {
-    background-color: transparent;
-    color: #fff;
-    border: none;
-}
-
-.btn-icono i {
-    font-size: clamp(1rem, 5vw, 3rem);
+    align-items: center;
+    margin: 0;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .contenedor-episodio {
-        height: 50vh;
+        height: 65vh;
     }
 }
 
