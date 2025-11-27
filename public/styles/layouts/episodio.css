@@ -8,6 +8,7 @@
 
 .contenedor-episodio {
     height: 40vh;
+    margin-bottom: 1rem;
 }
 
 .ctn-video {
@@ -26,6 +27,7 @@
     text-decoration: none;
     color: var(--letraHeader);
     align-items: center;
+    font-size: 1.2rem;
 }
 
 .nombre-capitulo {
@@ -33,10 +35,18 @@
     font-weight: 400;
     font-style: normal;
     color: var(--letraHeader);
-    display: flex;
     text-align: center;
-    align-items: center;
     margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .nombre-capitulo {
+        font-size: 2rem;
+    }
+
+    .navegacion-capitulos {
+        font-size: 1.5rem;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -47,6 +57,6 @@
 
 @media screen and (min-width: 1024px) {
     .contenedor-episodio {
-        height: 80vh;
+        height: 72vh;
     }
 }

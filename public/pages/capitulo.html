@@ -12,10 +12,11 @@
         <div class="contenedor-episodio">
             <iframe class="ctn-video" src="about:blank" allowfullscreen="true"></iframe>
         </div>
+        <h4 class="nombre-capitulo"></h4>
         <div class="opciones-capitulo">
-            <a href="#" class="navegacion-capitulos"> <i data-lucide="skip-back"></i>Anterior</a>
-            <h4 class="nombre-capitulo"></h4>
-            <a href="#" class="navegacion-capitulos"> <i data-lucide="skip-forward"></i>Siguiente</a>
+            <a href="" id="previous" class="navegacion-capitulos"><i class="fa-solid fa-backward-step"></i></a>
+            <a href="" id="home" class="navegacion-capitulos"><i class="fa-solid fa-house"></i></a>
+            <a href="" id="next" class="navegacion-capitulos"></i><i class="fa-solid fa-forward-step"></i></a>
         </div>
     </main>
 
@@ -25,10 +26,6 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/dc6efa34d2.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-        lucide.createIcons();
-    </script>
     <script src="/scripts/capitulo.js" type="module"></script>
     <script src="/scripts/tools/manejoNavbars.js"></script>
 </body>
