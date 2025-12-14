@@ -27,13 +27,16 @@ async function init() {
         crearLogo(datosSerie);
         crearDescripcion(datosSerie);
         crearTemporadas(datosSerie);
-        crearInformacion(informacionSerie);        
+        crearInformacion(informacionSerie);
         crearDescarga(informacionSerie);
-        crearCapitulos(datosSerie, capitulosSerie);     
-        
+        crearCapitulos(datosSerie, capitulosSerie);
+
         attachClickTemporadas();
     } catch (err) {
         console.error(err);
+        console.log("Serie no encontrada")
+        document.title = '404';
+
     }
 }
 

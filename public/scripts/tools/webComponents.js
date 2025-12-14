@@ -17,6 +17,7 @@ class head extends HTMLElement {
             <link rel="stylesheet" href="/styles/layouts/serie.css">
             <link rel="stylesheet" href="/styles/layouts/episodio.css">
             <link rel="stylesheet" href="/styles/layouts/footer.css">
+            <link rel="stylesheet" href="/styles/layouts/error-style.css">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link
@@ -30,12 +31,12 @@ class head extends HTMLElement {
     }
 }
 
-class header extends HTMLElement{
-    constructor(){
+class header extends HTMLElement {
+    constructor() {
         super();
     }
 
-    connectedCallback(){
+    connectedCallback() {
         this.innerHTML = `
         <header>
             <div class="titulo-logo-main">
@@ -54,12 +55,12 @@ class header extends HTMLElement{
     }
 }
 
-class footer extends HTMLElement{
-    constructor(){
+class footer extends HTMLElement {
+    constructor() {
         super();
     }
 
-    connectedCallback(){
+    connectedCallback() {
         this.innerHTML = `
         <footer class="ctn-footer">
             <div class="ctn-informacion-footer">

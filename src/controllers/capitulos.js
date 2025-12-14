@@ -1,11 +1,19 @@
 import Capitulos from "../models/Capitulos.js"
 import path from 'path';
+import mongoose from "mongoose";
 
 class capitulosController {
     constructor() { };
 
     async getHTMLCapitulo(req, res) {
         try {
+
+            const idCapitulo = req.params.idCapitulo;
+
+            if (!mongoose.isValidObjectId(idCapitulo)) {
+                return res.status(404).sendFile('public/pages/404.html', { root: process.cwd() });
+            }
+
             const ruta = path.join(process.cwd(), 'public/pages/capitulo.html');
             res.sendFile(ruta);
         } catch (error) {
